@@ -63,7 +63,10 @@
 
     </head>
     <body>
-        <div class="container">
+        <div class="flex justify-center items-center bg-brand-light w-full h-screen" id="loader">
+            <i class="fa fa-heart-o animate-ping text-brand font-bold text-2xl lg:text-4xl" aria-hidden="true" ></i>
+        </div>
+        <div class="container hidden" id="content">
             <!-- Header -->
             <header>
                 <div class="header">
@@ -388,6 +391,18 @@
                 <p>♡ 2023 September 9</p>
             </div>
             <!-- End of Footer -->
+
+            <script>
+                const myTimeout = setTimeout(lazyloadvideo, 5000);
+
+                function lazyloadvideo() {
+                    var video = document.getElementById("content");
+                    video.classList.remove("hidden");
+                    
+                    var img = document.getElementById("loader");
+                    img.classList.add("hidden");
+                }
+            </script>
 
             <script>
                 function reveal() {
