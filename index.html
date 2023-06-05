@@ -1,7 +1,479 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<html lang="en"><head>
+
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="OdilwJd73im7J4faQSAFpzRc44wiHsKqeyoI4HKl">
+        <link rel="icon" href="assets/icons/logo2.png">
+
+        <meta property="og:title" content="Archeal &amp; Jenny">
+        <meta property="og:description" content="1 John 4:18-19 - There is no fear in love. But perfect love drives out fear, because fear has to do with punishment. The one who fears is not made perfect in love.">
+        <meta property="og:image" content="assets/images/archeal_jenny2.jpg">
+        <meta property="og:url" content="/">
+        <meta property="og:type" content="website">
+
+        <!-- Twitter -->
+        <meta name="twitter:title" content="Archeal &amp; Jenny">
+        <meta name="twitter:description" content="1 John 4:18-19 - There is no fear in love. But perfect love drives out fear, because fear has to do with punishment. The one who fears is not made perfect in love.">
+        <meta name="twitter:image" content="assets/images/archeal_jenny2.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <title>Archeal &amp; Jenny</title>
+        <meta name="description" content="1 John 4:18-19 - There is no fear in love. But perfect love drives out fear, because fear has to do with punishment. The one who fears is not made perfect in love.">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            @font-face {
+                font-family: 'ADELIA';
+                src: url('assets/fonts/adelia.otf');
+            }
+
+            @font-face {
+                font-family: 'CenturyGothic';
+                src: url('assets/fonts/CenturyGothic.ttf');
+            }
+
+            .savethedate-container{
+                background: url('assets/images/archeal_jenny.jpg');
+            }
+            
+            @media (max-width: 940px) {
+                .savethedate-container{
+                    background: url('assets/images/archeal_jenny8.jpg') #00000033;
+                    background-blend-mode: multiply;
+                }
+            }
+
+            .others-bg:before{
+                content: "";
+                height: 368px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: -1;
+                object-position: center;
+                background: url('assets/images/ring.jpg') no-repeat 50%;
+            }
+        </style>
+
+        <!-- Styles -->
+        <link href="app.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="container">
+            <!-- Header -->
+            <header>
+                <div class="header">
+                    <div class="lists-container">
+                        <span onclick="goTo('banner')" class="list">HOME</span>
+                        <span onclick="goTo('groom_bride')" class="list">COUPLE</span>
+                        <span onclick="goTo('entourage')" class="list">ENTOURAGE</span>
+                        <span onclick="goTo('others')" class="list text-center">INFO</span>
+                        <span onclick="goTo('gallery')" class="list">GALLERY</span>
+                    </div>
+                    <div class="sm:hidden">
+                        <i class="fa fa-bars" aria-hidden="true" onclick="triggerNavbarOpen()" id="burger"></i>
+                    </div>
+                </div>
+                <div class="fixed w-full h-full z-40 bg-black-trans slide-black-close" id="navbar">
+                    <div class="bg-white h-full slide-left-close relative" id="dark-container" style="max-width: 300px; min-width: 279px;float: right;">
+                        <i class="fa fa-times hidden header" aria-hidden="true" onclick="triggerNavbarClose()" id="times"></i>
+                        <div class="grid p-16 gap-5">
+                            <span onclick="goTo('banner')" class="list">HOME</span>
+                            <span onclick="goTo('groom_bride')" class="list">COUPLE</span>
+                            <span onclick="goTo('entourage')" class="list">ENTOURAGE</span>
+                            <span onclick="goTo('others')" class="list">INFO</span>
+                            <span onclick="goTo('gallery')" class="list">GALLERY</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- End of Header -->
+
+            <!-- Banner -->
+            <div id="banner">
+                <video autoplay muted loop id="walking-video">
+                    <source src="assets/video/walk_summer.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <h1 class="title">Archeal & Jenny</h1>
+                <h2 class="sub-title">9TH SEPTEMBER, 2023 | 10:00 AM</h2>
+                <i class="fa fa-heart-o heart" aria-hidden="true" onclick="goTo('groom_bride')"></i>    
+            </div>
+            <!-- End of Banner -->
+
+            <!-- Groom Bride -->
+            <div class="py-16 px-5 sm:px-10 md:px-20 lg:px-24 xl:px-36 md:flex relative" id="groom_bride">
+                <div class="md:mr-5 lg:mr-10">
+                    <div class="img-container rounded-xl reveal fade-left">
+                        <img src="assets/images/archeal.jpg" alt="archeal" class="main-image">
+                    </div>
+                    <div class="reveal fade-left">
+                        <h2 class="self-title text-base sm:text-xl text-brand">Groom</h2>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold">Archeal</h2>
+                    </div>
+                </div>
+                <div class="pt-10 md:pt-24">
+                    <div class="img-container rounded-xl reveal fade-right md:duration-2">
+                        <img src="assets/images/jenny.jpg" alt="Jenny" class="main-image">
+                    </div>
+                    <div class="grid md:justify-items-end reveal fade-right md:duration-2">
+                        <h2 class="self-title text-base sm:text-xl text-brand">Bride</h2>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold">Jenny</h2>
+                    </div>
+                </div>
+                <p class="flower-arc hidden md:block">Better Together</p>
+            </div>
+            <!-- End of Groom Bride -->
+
+            <!-- Entourage -->
+            <div class="text-center py-16 px-5 sm:px-10 md:px-20 lg:px-40 xl:px-80 bg-brand-light relative" id="entourage">
+                <div class="grid gap-3 mb-2 reveal fade-bottom">
+                    <h2 class="en-main-title m-0">Entourage</h2>
+                    <h3 class="text-2xl sm:text-4xl">To walk us down the aisle</h3>
+                    <img src="assets/icons/flowers.png" alt="flowers" class="justify-self-center w-96">
+                </div>
+                <div class="grid xs:grid-cols-2 gap-2 mb-1 reveal fade-bottom">
+                    <div>
+                        <p class="en-title">PARENTS OF THE GROOM</p>
+                        <h3>Cristita Anie</h3>
+                    </div>
+                    <div>
+                        <p class="en-title">PARENTS OF THE BRIDE</p>
+                        <h3>Jemmy De Juan</h3>
+                        <h3>Norma De Juan</h3>
+                    </div>
+                </div>
+            
+                <h3 class="en-main-title reveal fade-bottom">Principal Sponsors</h3>
+            
+                <div class="sponsors grid xs:grid-cols-2 xs:gap-x-20 mb-2 reveal fade-bottom">
+                    <p>Athan Hutalla</p>
+                    <p>Rosal Hutalla</p>
+                    <p>Goelio Umayaw</p>
+                    <p>Cristina Umayaw</p>
+                    <p>Jonilo De Juan</p>
+                    <p>Mitch De Juan</p>
+                    <p>Lorem Ipsum</p>
+                    <p>Lorem Ipsum</p>
+                    <p>Lorem Ipsum</p>
+                    <p>Lorem Ipsum</p>
+                </div>
+            
+                <div class="grid xs:grid-cols-2 gap-2 reveal fade-bottom">
+                    <div>
+                        <h3 class="en-title">MAID OF HONOR</h3>
+                        <p>Zenaida Jeroso</p>
+                    </div>
+                    <div>
+                        <h3 class="en-title">BEST MAN</h3>
+                        <p>Lorem Ipsum</p>
+                    </div>
+                </div>
+            
+                <h3 class="en-main-title reveal fade-bottom">Secondary Sponsors</h3>
+            
+                <div class="grid sm:grid-cols-2 gap-2 mb-5 reveal fade-bottom">
+                    <div>
+                        <h3 class="en-title">BRIDEMAINS</h3>
+                        <p>Jessica De Juan</p>
+                        <p>Arlyn Aras</p>
+                        <p>Mariam Balisacan</p>
+                        <p>Ma. Roselle Castillano</p>
+                        <p>Mary Joy Lumacang</p>
+                        <p>Lorem Ipsum</p>
+                        <p>Lorem Ipsum</p>
+                    </div>
+                    <div>
+                        <h3 class="en-title">GROOMSMEN</h3>
+                        <p>Lorem Ipsum</p>
+                        <p>Lorem Ipsum</p>
+                        <p>Lorem Ipsum</p>
+                        <p>Lorem Ipsum</p>
+                        <p>Lorem Ipsum</p>
+                        <p>Lorem Ipsum</p>
+                        <p>Lorem Ipsum</p>
+                    </div>
+                </div>
+            
+                <div class="grid sm:grid-cols-3 gap-2 mb-5 reveal fade-bottom">
+                    <div>
+                        <h3 class="en-title">CANDLE</h3>
+                        <p>Lorem Ipsum</p>
+                        <p>Lorem Ipsum</p>
+                    </div>
+                    <div>
+                        <h3 class="en-title">VEIL</h3>
+                        <p>Lorem Ipsum</p>
+                        <p>Lorem Ipsum</p>
+                    </div>
+                    <div>
+                        <h3 class="en-title">CORD</h3>
+                        <p>Lorem Ipsum</p>
+                        <p>Lorem Ipsum</p>
+                    </div>
+                </div>
+            
+                <div class="grid xs:grid-cols-2 gap-5 reveal fade-bottom">
+                    <div>
+                        <h3 class="en-title">RING BEARER</h3>
+                        <p>Jayden Cassimir Haro</p>
+                    </div>
+                    <div>
+                        <h3 class="en-title">COIN BEARER</h3>
+                        <p>Lorem Ipsum</p>
+                    </div>
+                    <div>
+                        <h3 class="en-title">BIBLE BEARER</h3>
+                        <p>Lorem Ipsum</p>
+                    </div>
+                    <div>
+                        <h3 class="en-title">FLOWER GIRLS</h3>
+                        <p>Lorem Ipsum</p>
+                        <p>Lorem Ipsum</p>
+                    </div>
+                </div>
+            
+                <img src="assets/icons/flower-big.png" alt="flower-big" class="absolute w-28 sm:w-60 bottom-0" style="z-index:-1;left:9px">
+            </div>
+            <!-- End of Entourage -->
+
+            <!-- Others -->
+            <div class="others" id="others">
+                <div class="others-bg">
+                    <div class="grid lg:grid-cols-3 gap-10">
+                        <div class="card reveal fade-bottom">
+                            <div class="grid mb-10 mt-5">
+                                <img src="assets/icons/cheers.png" alt="cheers" class="card-icons">
+                            </div>
+                            <h2 class="en-title">RSVP</h2>
+                            <p>We have reserved seats for you. The favor of your reply is requested on June 30, 2023</p>
+                        </div>
+                        <div class="card reveal fade-bottom md:duration-2">
+                            <div class="grid mb-10 mt-5">
+                                <img src="assets/icons/attire.png" alt="attire" class="card-icons">
+                            </div>
+                            <h2 class="en-title">ATTIRE</h2>
+                            <p>
+                                <span class="font-bold">Guest:</span>
+                                <span>Semi-formal</span>
+                            </p>
+                            <h3 class="mt-2 mb-1 en-title">Principal Sponsors</h3>
+                            <p>
+                                <span class="font-bold">Ladies:</span>
+                                <span>Formal Long Gown (Cream or Nude)</span>
+                            </p>
+                            <p>
+                                <span class="font-bold">Gentleman:</span>
+                                <span>formal</span>
+                            </p>
+                        </div>
+                        <div class="card reveal fade-bottom md:duration-3">
+                            <div class="grid mb-10 mt-5">
+                                <img src="assets/icons/surprise.png" alt="surprise" class="card-icons">
+                            </div>
+                            <h2 class="en-title">GIFT REFERENCE</h2>
+                            <p>
+                                We haven't got a gift list for all of you to see; 
+                                because as you all know we never can agreed. 
+                                but if you'd like to help us start our married life, 
+                                a cash contribution would save a lot of strife!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Others -->
+
+            <!-- Save the Date -->
+            <div class="savethedate-container grid">
+                <div class="justify-self-center self-center mx-2 xs:mx-5 sm:mx-10 lg:mx-20">
+                    <div class="grid gap-3 mb-5 reveal fade-bottom">
+                        <h2 class="self-title text-lg sm:text-2xl font-bold">Save the Date</h2>
+                        <h3 class="text-2xl sm:text-4xl">Can't Wait to See You</h3>
+                        <img src="assets/icons/leaf.png" alt="Leaf" class="justify-self-center">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                        </p>
+                    </div>
+                    <div class="flex justify-center flex-wrap">
+                        <div class="time-container reveal fade-bottom">
+                            <div class="timer">
+                                <span id="days"></span>
+                            </div>
+                            <small class="timer-label">DAYS</small>
+                        </div>
+                        <div class="time-container mt-10  reveal fade-bottom duration-2">
+                            <div class="timer">
+                                <span id="hours"></span>
+                            </div>
+                            <small class="timer-label">HOURS</small>
+                        </div>
+                        <div class="time-container  reveal fade-bottom">
+                            <div class="timer">
+                                <span id="minutes"></span>
+                            </div>
+                            <small class="timer-label">MINS</small>
+                        </div>
+                        <div class="time-container mt-10  reveal fade-bottom duration-2">
+                            <div class="timer">
+                                <span id="seconds"></span>
+                            </div>
+                            <small class="timer-label">SECS</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Save the Date -->
+
+            <!-- Gallery -->
+            <div class="py-16 px-10 md:px-20 xl:px-36 text-center" id="gallery">
+                <h2 class="self-title text-2xl font-bold text-brand my-10 reveal fade-bottom">Gallery</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div class="img-container reveal fade-left duration">
+                        <img src="assets/images/archeal_jenny4.jpg"  class="gallery-image" alt="archeal_jenny">
+                    </div>
+                    <div class="img-container reveal fade-left duration">
+                        <img src="assets/images/archeal_jenny2.jpg"  class="gallery-image" alt="archeal_jenny">
+                    </div>
+                    <div class="img-container reveal fade-right lg:fade-left duration">
+                        <img src="assets/images/archeal2.jpg"  class="gallery-image" alt="archeal_jenny">
+                    </div>
+                    <div class="img-container reveal fade-right duration">
+                        <img src="assets/images/jenny2.jpg"  class="gallery-image object-center" alt="jenny">
+                    </div>
+                    <div class="img-container reveal fade-left lg:fade-right duration">
+                        <img src="assets/images/shoes.jpg"  class="gallery-image" alt="shoes">
+                    </div>
+                    <div class="img-container reveal fade-left lg:fade-right duration">
+                        <img src="assets/images/archeal_jenny9.jpg"  class="gallery-image object-center" alt="archeal_jenny">
+                    </div>
+                    <div class="img-container reveal fade-right lg:fade-left duration">
+                        <img src="assets/images/archeal_jenny6.jpg"  class="gallery-image" alt="archeal_jenny">
+                    </div>
+                    <div class="img-container reveal fade-right lg:fade-left duration">
+                        <img src="assets/images/archeal_jenny3.jpg"  class="gallery-image object-center" alt="archeal_jenny">
+                    </div>
+                    <div class="img-container reveal fade-left duration">
+                        <img src="assets/images/archeal_jenny7.jpg"  class="gallery-image" alt="archeal_jenny">
+                    </div>
+                    <div class="img-container reveal fade-left duration lg:hidden">
+                        <img src="assets/images/archeal_jenny5.jpg"  class="gallery-image" alt="archeal_jenny">
+                    </div>
+                </div>
+            </div>
+            <!-- End of Gallery -->
+
+            <!-- Footer -->
+            <div class="bg-brand-light h-96 py-20 flex items-center justify-center">
+                <div class="relative w-60 reveal fade-down">
+                    <div class="self-title text-xl text-center">
+                        <p>Archeal</p>
+                        <p class="my-3">&</p>
+                        <p>Jenny</p>
+                
+                    </div>
+                    <img src="assets/icons/flower-arc.png"  alt="flower-arc" class="absolute" style="top: -77px;
+                    right: 25px;
+                    z-index: -1;">
+                </div>
+            </div>
+            <div class="text-center py-5">
+                <p>© 2023 September 9</p>
+            </div>
+            <!-- End of Footer -->
+
+            <script>
+                function reveal() {
+                    var reveals = document.querySelectorAll(".reveal");
+                    for (var i = 0; i < reveals.length; i++) {
+                        var windowHeight = window.innerHeight;
+                        var elementTop = reveals[i].getBoundingClientRect().top;
+                        var elementVisible = 150;
+                        if (elementTop < windowHeight - elementVisible) {
+                        reveals[i].classList.add("active");
+                        } else {
+                        reveals[i].classList.remove("active");
+                        }
+                    }
+                }
+                
+                window.addEventListener("scroll", reveal);
+            </script>
+
+            <script>
+                function goTo(id) {
+                    triggerNavbarClose()
+                    document.getElementById(id).scrollIntoView({ block: 'start',  behavior: 'smooth' })
+                }
+                function triggerNavbarOpen() {
+                    var element = document.getElementById("navbar");
+                    element.classList.add("slide-black-open");
+
+                    var dark = document.getElementById("dark-container");
+                    dark.classList.add("slide-black-open");
+                    
+                    var bar = document.getElementById("burger");
+                    bar.classList.add("hidden");
+
+                    var times = document.getElementById("times");
+                    times.classList.remove("hidden");
+                }
+                function triggerNavbarClose() {
+                    var element = document.getElementById("navbar");
+                    element.classList.remove("slide-black-open");
+
+                    var dark = document.getElementById("dark-container");
+                    dark.classList.remove("slide-black-open");
+                    
+                    var bar = document.getElementById("burger");
+                    bar.classList.remove("hidden");
+
+                    var times = document.getElementById("times");
+                    times.classList.add("hidden");
+                }
+            </script>
+
+            <script>
+                // date_today = {!! $date_now !!};
+                // Set the date we're counting down to
+                var countDownDate = new Date("Sept 9, 2023 10:00:00").getTime();
+                
+                // Update the count down every 1 second
+                var x = setInterval(function() {
+                
+                  // Get today's date and time
+                  var now = new Date().getTime();
+                    
+                  // Find the distance between now and the count down date
+                  var distance = countDownDate - now;
+                    
+                  // Time calculations for days, hours, minutes and seconds
+                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                  document.getElementById("days").innerHTML = days;
+                  document.getElementById("hours").innerHTML = hours;
+                  document.getElementById("minutes").innerHTML = minutes;
+                  document.getElementById("seconds").innerHTML = seconds;
+                    
+                  // If the count down is over, write some text 
+                  if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("Timer").innerHTML = "EXPIRED";
+                  }
+                }, 1000);
+            </script>
+            
+        </div>
+    
+    </body>
 </html>
