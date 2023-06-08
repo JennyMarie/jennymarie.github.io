@@ -68,7 +68,10 @@
     </head>
     <body>
         <div class="flex justify-center items-center bg-brand-light w-full h-screen" id="loader">
-            <i class="fa fa-heart-o animate-ping text-brand font-bold text-2xl lg:text-4xl" aria-hidden="true" ></i>
+            <div class="text-center cursor-pointer" onclick="playAudio()">
+                <i class="fa fa-heart-o animate-ping text-brand font-bold text-2xl lg:text-4xl mb-3" aria-hidden="true" ></i>
+                <p class="text-sm hidden" id="click-me">Click Here</p>
+            </div>
         </div>
         <div class="container hidden" id="content">
             <!-- Header -->
@@ -102,7 +105,7 @@
 
             <!-- Banner -->
             <div id="banner">
-                <video autoplay muted loop id="walking-video">
+                <video autoplay muted loop id="walking-video" muted="muted">
                     <source src="assets/video/walk_summer_compress.mp4" type="video/mp4">
                     Your browser does not support HTML5 video.
                 </video>
@@ -398,14 +401,27 @@
             <!-- End of Footer -->
 
             <script>
-                const myTimeout = setTimeout(lazyloadvideo, 5000);
+                const myTimeout = setTimeout(showClickMe, 5000);
 
-                function lazyloadvideo() {
+                function showClickMe() {
+                    var video = document.getElementById("click-me");
+                    video.classList.remove("hidden");
+                    
+                    // var img = document.getElementById("loader");
+                    // img.classList.add("hidden");
+                }
+
+                function playAudio() {
+                    var audio = new Audio('assets/music/Christmas_tree.mp3');
+                    audio.currentTime = 12
+                    audio.play();
+
                     var video = document.getElementById("content");
                     video.classList.remove("hidden");
                     
                     var img = document.getElementById("loader");
                     img.classList.add("hidden");
+                    
                 }
             </script>
 
