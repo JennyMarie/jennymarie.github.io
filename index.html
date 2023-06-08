@@ -61,10 +61,6 @@
                 object-position: end;
                 background: url('assets/images/ring.jpg') no-repeat 50%;
             }
-
-            .en-title, .en-main-title {
-                font-weight: 500 !important;
-            }
         </style>
 
         <!-- Styles -->
@@ -73,9 +69,19 @@
     </head>
     <body>
         <div class="loading-page" id="loader">
-            <div class="text-center cursor-pointer" onclick="playAudio()">
-                <i class="fa fa-heart-o animate-ping text-brand font-bold text-2xl lg:text-4xl mb-3" aria-hidden="true" ></i>
-                <p class="text-sm hidden" id="click-me">CLICK HERE</p>
+            <div class="text-center">
+                <i class="fa fa-heart-o animate-ping text-brand font-bold text-2xl lg:text-4xl" aria-hidden="true" id="popping-heart" ></i>
+                <button 
+                    class="hidden text-sm px-3 py-2 text-white rounded-full my-3 cursor-pointer" 
+                    style="background-color: #f6a1928c;" 
+                    id="click-me" 
+                    onclick="playAudio()"
+                >
+                    CLICK HERE
+                </button>
+                <p class="animate-bounce text-xl text-white hidden" id="arrow">
+                    ^
+                </p>
             </div>
         </div>
         <div class="container hidden" id="content">
@@ -406,14 +412,16 @@
             <!-- End of Footer -->
 
             <script>
-                const myTimeout = setTimeout(showClickMe, 5000);
+                const myTimeout = setTimeout(showClickMe, 3000);
 
                 function showClickMe() {
                     var video = document.getElementById("click-me");
                     video.classList.remove("hidden");
+                    var arrow = document.getElementById("arrow");
+                    arrow.classList.remove("hidden");
                     
-                    // var img = document.getElementById("loader");
-                    // img.classList.add("hidden");
+                    var img = document.getElementById("popping-heart");
+                    img.classList.add("hidden");
                 }
 
                 function playAudio() {
