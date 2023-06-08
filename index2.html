@@ -1,6 +1,6 @@
-<html lang="en"><head>
-
-        
+<html lang="en">
+    <head>
+    
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="OdilwJd73im7J4faQSAFpzRc44wiHsKqeyoI4HKl">
@@ -36,6 +36,7 @@
 
             .savethedate-container{
                 background: url('assets/images/archeal_jenny.jpg');
+                opacity: unset !important;
             }
             
             @media (max-width: 940px) {
@@ -59,6 +60,10 @@
 
             .en-title, .en-main-title {
                 font-weight: 500 !important;
+            }
+
+            .en-main-title {
+                text-shadow: unset !important;
             }
         </style>
 
@@ -298,10 +303,11 @@
             <!-- End of Others -->
 
             <!-- Save the Date -->
-            <div class="savethedate-container grid">
+            <div class="savethedate-container grid relative">
+                <div class="absolute bg-black-trans w-full h-full"></div>
                 <div class="justify-self-center self-center mx-2 xs:mx-5 sm:mx-10 lg:mx-20">
-                    <div class="grid gap-3 mb-5 reveal fade-bottom">
-                        <h2 class="self-title text-lg sm:text-2xl font-bold">Save the Date</h2>
+                    <div class="grid gap-3 mb-10 reveal fade-bottom">
+                        <h2 class="self-title text-lg sm:text-2xl font-bold" style="color:rgb(246 161 146 / var(--tw-text-opacity))">Save the Date</h2>
                         <h3 class="text-2xl sm:text-4xl">Can't Wait to See You</h3>
                         <img src="assets/icons/leaf.png" alt="Leaf" class="justify-self-center">
                         <p>
@@ -393,12 +399,12 @@
                 </div>
             </div>
             <div class="text-center py-5">
-                <p>♡ 2023 September 9</p>
+                <p>Archeal ♡ Jenny | September 9 2023</p>
             </div>
             <!-- End of Footer -->
 
             <script>
-                const myTimeout = setTimeout(lazyloadvideo, 5000);
+                const myTimeout = setTimeout(lazyloadvideo, 3000);
 
                 function lazyloadvideo() {
                     var video = document.getElementById("content");
