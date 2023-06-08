@@ -45,6 +45,11 @@
                 }
             }
 
+            .loading-page{
+                object-position: center;
+                background: url('assets/images/ring2.jpg') no-repeat 50%;
+            }
+
             .others-bg:before{
                 content: "";
                 height: 368px;
@@ -53,7 +58,7 @@
                 top: 0;
                 width: 100%;
                 z-index: -1;
-                object-position: center;
+                object-position: end;
                 background: url('assets/images/ring.jpg') no-repeat 50%;
             }
 
@@ -67,7 +72,7 @@
 
     </head>
     <body>
-        <div class="flex justify-center items-center bg-brand-light w-full h-screen" id="loader">
+        <div class="loading-page" id="loader">
             <div class="text-center cursor-pointer" onclick="playAudio()">
                 <i class="fa fa-heart-o animate-ping text-brand font-bold text-2xl lg:text-4xl mb-3" aria-hidden="true" ></i>
                 <p class="text-sm hidden" id="click-me">Click Here</p>
