@@ -1,136 +1,139 @@
 <html lang="en"><head>
 
         
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="OdilwJd73im7J4faQSAFpzRc44wiHsKqeyoI4HKl">
-        <link rel="icon" href="assets/icons/logo2.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="OdilwJd73im7J4faQSAFpzRc44wiHsKqeyoI4HKl">
+    <link rel="icon" href="assets/icons/logo2.png">
 
-        <meta property="og:title" content="Archeal &amp; Jenny">
-        <meta property="og:description" content="1 John 4:18-19 - There is no fear in love. But perfect love drives out fear, because fear has to do with punishment. The one who fears is not made perfect in love.">
-        <meta property="og:image" content="assets/images/archeal_jenny2.jpg">
-        <meta property="og:url" content="/">
-        <meta property="og:type" content="website">
+    <meta property="og:title" content="Archeal &amp; Jenny">
+    <meta property="og:description" content="1 John 4:18-19 - There is no fear in love. But perfect love drives out fear, because fear has to do with punishment. The one who fears is not made perfect in love.">
+    <meta property="og:image" content="assets/images/archeal_jenny2.jpg">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
 
-        <!-- Twitter -->
-        <meta name="twitter:title" content="Archeal &amp; Jenny">
-        <meta name="twitter:description" content="1 John 4:18-19 - There is no fear in love. But perfect love drives out fear, because fear has to do with punishment. The one who fears is not made perfect in love.">
-        <meta name="twitter:image" content="assets/images/archeal_jenny2.jpg">
-        <meta name="twitter:card" content="summary_large_image">
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Archeal &amp; Jenny">
+    <meta name="twitter:description" content="1 John 4:18-19 - There is no fear in love. But perfect love drives out fear, because fear has to do with punishment. The one who fears is not made perfect in love.">
+    <meta name="twitter:image" content="assets/images/archeal_jenny2.jpg">
+    <meta name="twitter:card" content="summary_large_image">
 
-        <title>Archeal &amp; Jenny</title>
-        <meta name="description" content="1 John 4:18-19 - There is no fear in love. But perfect love drives out fear, because fear has to do with punishment. The one who fears is not made perfect in love.">
+    <title>Archeal &amp; Jenny</title>
+    <meta name="description" content="1 John 4:18-19 - There is no fear in love. But perfect love drives out fear, because fear has to do with punishment. The one who fears is not made perfect in love.">
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            @font-face {
-                font-family: 'ADELIA';
-                src: url('assets/fonts/adelia.otf');
-            }
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @font-face {
+            font-family: 'ADELIA';
+            src: url('assets/fonts/adelia.otf');
+        }
 
-            @font-face {
-                font-family: 'CenturyGothic';
-                src: url('assets/fonts/CenturyGothic.ttf');
-            }
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('assets/fonts/CenturyGothic.ttf');
+        }
 
+        .savethedate-container{
+            background: url('assets/images/archeal_jenny.jpg');
+        }
+        
+        @media (max-width: 940px) {
             .savethedate-container{
-                background: url('assets/images/archeal_jenny.jpg');
+                background: url('assets/images/archeal_jenny8.jpg') #00000033;
+                background-blend-mode: multiply;
             }
-            
-            @media (max-width: 940px) {
-                .savethedate-container{
-                    background: url('assets/images/archeal_jenny8.jpg') #00000033;
-                    background-blend-mode: multiply;
-                }
-            }
+        }
 
-            .loading-page{
-                object-position: center;
-                background: url('assets/images/ring2.jpg') no-repeat 50%;
-            }
+        .loading-page{
+            object-position: center;
+            background: url('assets/images/ring2.jpg') no-repeat 50%;
+        }
 
-            .others-bg:before{
-                content: "";
-                height: 368px;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 100%;
-                z-index: -1;
-                object-position: end;
-                background: url('assets/images/ring.jpg') no-repeat 50%;
-            }
-        </style>
+        .others-bg:before{
+            content: "";
+            height: 368px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -1;
+            object-position: end;
+            background: url('assets/images/ring.jpg') no-repeat 50%;
+        }
+    </style>
 
-        <!-- Styles -->
-        <link href="app.css" rel="stylesheet">
+    <!-- Styles -->
+    <link href="app.css" rel="stylesheet">
 
-    </head>
-    <body>
-        <div class="loading-page" id="loader">
-            <div class="text-center">
-                <span class="relative flex" id="heart-container">
-                    <i class="fa fa-heart" aria-hidden="true" id="popping-heart"></i>
-                    <i class="fa fa-heart text-white font-bold text-2xl lg:text-4xl relative inline-flex" aria-hidden="true"></i>
-                </span>
-                <button 
-                    class="hidden text-sm px-3 py-2 text-white rounded-full my-3 cursor-pointer" 
-                    style="background-color: #f6a1928c;" 
-                    id="click-me" 
-                    onclick="playAudio()"
-                >
-                    CLICK HERE
-                </button>
-                <p class="animate-bounce text-xl text-white hidden" id="arrow">
-                    ^
-                </p>
-            </div>
+</head>
+<body>
+    <div class="loading-page" id="loader">
+        <div class="text-center">
+            <span class="relative flex" id="heart-container">
+                <i class="fa fa-heart" aria-hidden="true" id="popping-heart"></i>
+                <i class="fa fa-heart text-white font-bold text-2xl lg:text-4xl relative inline-flex" aria-hidden="true"></i>
+            </span>
+            <button 
+                class="hidden px-6 py-4 text-white rounded-full my-3 cursor-pointer" 
+                style="background-color: #f6a1928c; border: 1px solid white; box-shadow: 0px 0px 17px #ffffffd9;" 
+                id="click-me" 
+                onclick="playAudio()"
+            >
+                CLICK HERE
+            </button>
+            <p class="animate-bounce text-xl text-white hidden" id="arrow">
+                ^
+            </p>
         </div>
-        <div class="container hidden" id="content">
-            <!-- Header -->
-            <header>
-                <div class="header">
-                    <div class="lists-container">
+    </div>
+    <div class="container hidden" id="content">
+        <!-- Header -->
+        <header>
+            <div class="header">
+                <div class="lists-container">
+                    <span onclick="goTo('banner')" class="list">HOME</span>
+                    <span onclick="goTo('groom_bride')" class="list">COUPLE</span>
+                    <span onclick="goTo('entourage')" class="list">ENTOURAGE</span>
+                    <span onclick="goTo('others')" class="list text-center">INFO</span>
+                    <span onclick="goTo('gallery')" class="list">GALLERY</span>
+                </div>
+                <div class="sm:hidden">
+                    <i class="fa fa-bars" aria-hidden="true" onclick="triggerNavbarOpen()" id="burger"></i>
+                </div>
+            </div>
+            <div class="fixed w-full h-full z-40 bg-black-trans slide-black-close" id="navbar">
+                <div class="bg-white h-full slide-left-close relative" id="dark-container" style="max-width: 300px; min-width: 279px;float: right;">
+                    <i class="fa fa-times hidden header" aria-hidden="true" onclick="triggerNavbarClose()" id="times"></i>
+                    <div class="grid p-16 gap-5">
                         <span onclick="goTo('banner')" class="list">HOME</span>
                         <span onclick="goTo('groom_bride')" class="list">COUPLE</span>
                         <span onclick="goTo('entourage')" class="list">ENTOURAGE</span>
-                        <span onclick="goTo('others')" class="list text-center">INFO</span>
+                        <span onclick="goTo('others')" class="list">INFO</span>
                         <span onclick="goTo('gallery')" class="list">GALLERY</span>
                     </div>
-                    <div class="sm:hidden">
-                        <i class="fa fa-bars" aria-hidden="true" onclick="triggerNavbarOpen()" id="burger"></i>
-                    </div>
                 </div>
-                <div class="fixed w-full h-full z-40 bg-black-trans slide-black-close" id="navbar">
-                    <div class="bg-white h-full slide-left-close relative" id="dark-container" style="max-width: 300px; min-width: 279px;float: right;">
-                        <i class="fa fa-times hidden header" aria-hidden="true" onclick="triggerNavbarClose()" id="times"></i>
-                        <div class="grid p-16 gap-5">
-                            <span onclick="goTo('banner')" class="list">HOME</span>
-                            <span onclick="goTo('groom_bride')" class="list">COUPLE</span>
-                            <span onclick="goTo('entourage')" class="list">ENTOURAGE</span>
-                            <span onclick="goTo('others')" class="list">INFO</span>
-                            <span onclick="goTo('gallery')" class="list">GALLERY</span>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <!-- End of Header -->
+            </div>
+        </header>
+        <!-- End of Header -->
 
-            <!-- Banner -->
-            <div id="banner">
-                <video autoplay muted loop id="walking-video" muted="muted">
-                    <source src="assets/video/walk_summer_compress.mp4" type="video/mp4">
-                    Your browser does not support HTML5 video.
-                </video>
+        <!-- Banner -->
+        <div id="banner">
+            <video autoplay muted loop id="walking-video" muted="muted">
+                <source src="assets/video/walk_summer_compress.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <div class="banner-title">
                 <h1 class="title">Archeal & Jenny</h1>
-                <h2 class="sub-title">9TH SEPTEMBER, 2023 | 10:00 AM</h2>
+                <h2 class="sub-title mb-10">9TH SEPTEMBER, 2023 | 10:00 AM</h2>
                 <i class="fa fa-heart-o heart" aria-hidden="true" onclick="goTo('groom_bride')"></i>    
             </div>
-            <!-- End of Banner -->
+        </div>
+        <!-- End of Banner -->
 
-            <!-- Groom Bride -->
-            <div class="py-16 px-5 sm:px-10 md:px-20 lg:px-24 xl:px-36 md:flex relative" id="groom_bride">
+        <!-- Groom Bride -->
+        <div class="py-16 px-5 sm:px-10 md:px-20 lg:px-24 xl:px-36">
+            <div class="justify-center md:flex relative" id="groom_bride">
                 <div class="md:mr-5 lg:mr-10">
                     <div class="img-container rounded-xl reveal fade-left">
                         <img src="assets/images/archeal.jpg" alt="archeal" class="main-image">
@@ -149,383 +152,409 @@
                         <h2 class="text-3xl sm:text-4xl font-extrabold">Jenny</h2>
                     </div>
                 </div>
-                <p class="flower-arc hidden md:block">Better Together</p>
+                <p class="flower-arc hidden md:block text-center">Better Together</p>
             </div>
-            <!-- End of Groom Bride -->
-
-            <!-- Entourage -->
-            <div class="text-center py-16 px-5 sm:px-10 md:px-20 lg:px-40 xl:px-80 bg-brand-light relative" id="entourage">
-                <div class="grid gap-3 mb-10 reveal fade-bottom">
-                    <h2 class="en-main-title mb-2">Entourage</h2>
-                    <h3 class="text-2xl sm:text-4xl">To walk us down the aisle</h3>
-                    <img src="assets/icons/flowers.png" alt="flowers" class="justify-self-center w-96">
-                </div>
-                <div class="grid xs:grid-cols-2 gap-2 mb-1 reveal fade-bottom">
-                    <div>
-                        <p class="en-main-title">Parents of the Groom</p>
-                        <h3>Cristita Anie</h3>
-                        <h3>Elberto Anie</h3>
-                    </div>
-                    <div>
-                        <p class="en-main-title">Parents of the Bride</p>
-                        <h3>Jemmy De Juan</h3>
-                        <h3>Norma De Juan</h3>
-                    </div>
-                </div>
-
-                <div class="reveal fade-bottom">
-                    <h3 class="en-main-title">Officiant</h3>
-                    <p>Jovitmar Bomarlong</p>
-                </div>
-            
-                <h3 class="en-main-title reveal fade-bottom">Principal Sponsors</h3>
-            
-                <div class="sponsors grid xs:grid-cols-2 xs:gap-x-20 mb-5 reveal fade-bottom">
-                    <p>Athan Hutalla</p>
-                    <p>Rosal Hutalla</p>
-                    <p>Godelio Umayaw</p>
-                    <p>Cristina Umayaw</p>
-                    <p>Jonilo De Juan</p>
-                    <p>Micheryl De Juan</p>
-                    <p>Wilfredo Garejo</p>
-                    <p>Noriza Gareho</p>
-                    <p>Jeremy Atienza</p>
-                    <p>Jerly Atienza</p>
-                </div>
-            
-                <div class="grid xs:grid-cols-2 gap-2 mb-5 reveal fade-bottom">
-                    <div>
-                        <h3 class="en-main-title">Maid of Honor</h3>
-                        <p>Zenaida Jeroso</p>
-                    </div>
-                    <div>
-                        <h3 class="en-main-title">Best Man</h3>
-                        <p>Sharwin Atienza</p>
-                    </div>
-                </div>
-            
-                <div class="grid sm:grid-cols-2 gap-2 mb-5 reveal fade-bottom">
-                    <div>
-                        <h3 class="en-main-title">Bridemaids</h3>
-                        <p>Jessica De Juan</p>
-                        <p>Arlyn Aras</p>
-                        <p>Mariam Balisacan</p>
-                        <p>Cathlyn Azel Hayag</p>
-                    </div>
-                    <div>
-                        <h3 class="en-main-title">Groomsmen</h3>
-                        <p>Gideon Kyle Anie</p>
-                        <p>Jetar John Subrado</p>
-                        <p>Jimuel Dequiña</p>
-                        <p>Jake Darwin Maestro</p>
-                    </div>
-                </div>
-
-                <h3 class="en-main-title reveal fade-bottom">Secondary Sponsors</h3>
-            
-                <div class="grid sm:grid-cols-3 gap-2 mb-10 reveal fade-bottom">
-                    <div>
-                        <h3 class="en-main-title">Candle</h3>
-                        <p>Ma. Roselle Castillano</p>
-                        <p>Lester Zamudio</p>
-                    </div>
-                    <div>
-                        <h3 class="en-main-title">Veil</h3>
-                        <p>Mary Joy Lumacang</p>
-                        <p>Arvie Pereña</p>
-                    </div>
-                    <div>
-                        <h3 class="en-main-title">Cord</h3>
-                        <p>Sheryl Anie</p>
-                        <p>Ariel Conversion</p>
-                    </div>
-                </div>
-            
-                <div class="grid sm:grid-cols-3 gap-2 mb-10 reveal fade-bottom">
-                    <div>
-                        <h3 class="en-main-title">Ring Bearer</h3>
-                        <p>Jayden Cassimir Haro</p>
-                    </div>
-                    <div>
-                        <h3 class="en-main-title">Coin Bearer</h3>
-                        <p>Uzziah Kiel Anie</p>
-                    </div>
-                    <div>
-                        <h3 class="en-main-title">Bible Bearer</h3>
-                        <p>Aiden Kier Hayag</p>
-                    </div>
-                </div>
-                <div class="reveal fade-bottom mb-10">
-                    <h3 class="en-main-title">Flower Girls</h3>
-                    <p>Ezra Legaspi</p>
-                    <p>Abigail Bumarlong</p>
-                </div>
-            
-                <img src="assets/icons/flower-big.png" alt="flower-big" class="absolute w-28 sm:w-60 bottom-0" style="z-index:-1;left:9px">
+            <div class="pt-16 reveal fade-bottom text-center">
+                <p class="text-brand self-title leading-10 text-xl sm:text-2xl tracking-wider">
+                    He has made everything beautiful in its time. . .
+                    <!-- He has also set eternity in the human heart; yet no one can fathom what God has done from beginning to end. -->
+                </p>
+                <p class="text-lg sm:text-xl mt-5">Ecclesiastes 3:11</p>
             </div>
-            <!-- End of Entourage -->
+        </div>
+        <!-- End of Groom Bride -->
 
-            <!-- Others -->
-            <div class="others" id="others">
-                <div class="others-bg">
-                    <div class="grid lg:grid-cols-3 gap-10">
-                        <div class="card reveal fade-bottom">
-                            <div class="grid mb-10 mt-5">
-                                <img src="assets/icons/cheers.png" alt="cheers" class="card-icons">
-                            </div>
-                            <h2 class="en-title mb-2">RSVP</h2>
-                            <p>We have reserved seats for you. The favor of your reply is requested on June 30, 2023</p>
+        <!-- Entourage -->
+        <div class="text-center py-16 px-5 sm:px-10 md:px-20 lg:px-40 xl:px-80 bg-brand-light relative" id="entourage">
+            <div class="grid gap-3 mb-10 reveal fade-bottom">
+                <h2 class="en-main-title mb-2">Entourage</h2>
+                <h3 class="text-2xl sm:text-4xl">To walk us down the aisle</h3>
+                <img src="assets/icons/flowers.png" alt="flowers" class="justify-self-center w-96">
+            </div>
+            <div class="grid xs:grid-cols-2 gap-2 mb-1 reveal fade-bottom">
+                <div>
+                    <p class="en-main-title">Parents of the Groom</p>
+                    <h3>Cristita Anie</h3>
+                    <h3>Elberto Anie</h3>
+                </div>
+                <div>
+                    <p class="en-main-title">Parents of the Bride</p>
+                    <h3>Jemmy De Juan</h3>
+                    <h3>Norma De Juan</h3>
+                </div>
+            </div>
+
+            <div class="reveal fade-bottom">
+                <h3 class="en-main-title">Officiant</h3>
+                <p>Jovitmar Bomarlong</p>
+            </div>
+        
+            <h3 class="en-main-title reveal fade-bottom">Principal Sponsors</h3>
+        
+            <div class="sponsors grid xs:grid-cols-2 xs:gap-x-20 mb-5 reveal fade-bottom">
+                <p>Athan Hutalla</p>
+                <p>Rosal Hutalla</p>
+                <p>Godelio Umayaw</p>
+                <p>Cristina Umayaw</p>
+                <p>Jonilo De Juan</p>
+                <p>Micheryl De Juan</p>
+                <p>Wilfredo Garejo</p>
+                <p>Noriza Gareho</p>
+                <p>Jeremy Atienza</p>
+                <p>Jerly Atienza</p>
+            </div>
+        
+            <div class="grid xs:grid-cols-2 gap-2 mb-5 reveal fade-bottom">
+                <div>
+                    <h3 class="en-main-title">Maid of Honor</h3>
+                    <p>Zenaida Jeroso</p>
+                </div>
+                <div>
+                    <h3 class="en-main-title">Best Man</h3>
+                    <p>Sharwin Atienza</p>
+                </div>
+            </div>
+        
+            <div class="grid sm:grid-cols-2 gap-2 mb-5 reveal fade-bottom">
+                <div>
+                    <h3 class="en-main-title">Bridemaids</h3>
+                    <p>Jessica De Juan</p>
+                    <p>Arlyn Aras</p>
+                    <p>Mariam Balisacan</p>
+                    <p>Cathlyn Azel Hayag</p>
+                </div>
+                <div>
+                    <h3 class="en-main-title">Groomsmen</h3>
+                    <p>Gideon Kyle Anie</p>
+                    <p>Jetar John Subrado</p>
+                    <p>Jimuel Dequiña</p>
+                    <p>Jake Darwin Maestro</p>
+                </div>
+            </div>
+
+            <h3 class="en-main-title reveal fade-bottom">Secondary Sponsors</h3>
+        
+            <div class="grid sm:grid-cols-3 gap-2 mb-10 reveal fade-bottom">
+                <div>
+                    <h3 class="en-main-title">Candle</h3>
+                    <p>Ma. Roselle Castillano</p>
+                    <p>Lester Zamudio</p>
+                </div>
+                <div>
+                    <h3 class="en-main-title">Veil</h3>
+                    <p>Mary Joy Lumacang</p>
+                    <p>Arvie Pereña</p>
+                </div>
+                <div>
+                    <h3 class="en-main-title">Cord</h3>
+                    <p>Sheryl Anie</p>
+                    <p>Ariel Conversion</p>
+                </div>
+            </div>
+        
+            <div class="grid sm:grid-cols-3 gap-2 mb-10 reveal fade-bottom">
+                <div>
+                    <h3 class="en-main-title">Ring Bearer</h3>
+                    <p>Jayden Cassimir Haro</p>
+                </div>
+                <div>
+                    <h3 class="en-main-title">Coin Bearer</h3>
+                    <p>Uzziah Kiel Anie</p>
+                </div>
+                <div>
+                    <h3 class="en-main-title">Bible Bearer</h3>
+                    <p>Aiden Kier Hayag</p>
+                </div>
+            </div>
+            <div class="reveal fade-bottom mb-10">
+                <h3 class="en-main-title">Flower Girls</h3>
+                <p>Ezra Legaspi</p>
+                <p>Abigail Bumarlong</p>
+            </div>
+        
+            <img src="assets/icons/flower-big.png" alt="flower-big" class="absolute w-28 sm:w-60 bottom-0" style="z-index:-1;left:9px">
+        </div>
+        <!-- End of Entourage -->
+
+        <!-- Others -->
+        <div class="others" id="others">
+            <div class="others-bg">
+                <div class="grid lg:grid-cols-3 gap-10">
+                    <div class="card reveal fade-bottom">
+                        <div class="grid mb-10 mt-5">
+                            <img src="assets/icons/cheers.png" alt="cheers" class="card-icons">
                         </div>
-                        <div class="card reveal fade-bottom md:duration-2">
-                            <div class="grid mb-10 mt-5">
-                                <img src="assets/icons/attire.png" alt="attire" class="card-icons">
-                            </div>
-                            <h2 class="en-title mb-2">ATTIRE</h2>
-                            <div class="mb-2">
-                                <b>Guest:</b>
-                                <span>Semi-formal</span>
-                            </div>
-                            <div>
-                                <b>Principal Sponsors</b>
-                                <p class="mb-1">
-                                    <span>Ladies:</span>
-                                    <span>Formal Long Gown (Cream or Peach)</span>
-                                </p>
-                                <p>
-                                    <span>Gentleman:</span>
-                                    <span>Formal</span>
-                                </p>
-                            </div>
+                        <h2 class="en-title mb-2">RSVP</h2>
+                        <p>We have reserved seats for you. The favor of your reply is requested on June 30, 2023</p>
+                    </div>
+                    <div class="card reveal fade-bottom md:duration-2">
+                        <div class="grid mb-10 mt-5">
+                            <img src="assets/icons/attire.png" alt="attire" class="card-icons">
                         </div>
-                        <div class="card reveal fade-bottom md:duration-3">
-                            <div class="grid mb-10 mt-5">
-                                <img src="assets/icons/surprise.png" alt="surprise" class="card-icons">
-                            </div>
-                            <h2 class="en-title mb-2">GIFT REFERENCE</h2>
+                        <h2 class="en-title mb-2">ATTIRE</h2>
+                        <div class="mb-2">
+                            <b>Guest:</b>
+                            <span>Semi-formal</span>
+                        </div>
+                        <div>
+                            <b>Principal Sponsors</b>
+                            <p class="mb-1">
+                                <span>Ladies:</span>
+                                <span>Formal Long Gown (Cream or Peach)</span>
+                            </p>
                             <p>
-                                We haven't got a gift list for all of you to see; 
-                                because as you all know we never can agreed. 
-                                but if you'd like to help us start our married life, 
-                                a cash contribution would save a lot of strife!
+                                <span>Gentleman:</span>
+                                <span>Formal</span>
                             </p>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- End of Others -->
-
-            <!-- Save the Date -->
-            <div class="savethedate-container grid">
-                <div class="justify-self-center self-center mx-2 xs:mx-5 sm:mx-10 lg:mx-20">
-                    <div class="grid gap-3 mb-5 reveal fade-bottom">
-                        <h2 class="self-title text-lg sm:text-2xl font-bold">Save the Date</h2>
-                        <h3 class="text-2xl sm:text-4xl">Can't Wait to See You</h3>
-                        <img src="assets/icons/leaf.png" alt="Leaf" class="justify-self-center">
+                    <div class="card reveal fade-bottom md:duration-3">
+                        <div class="grid mb-10 mt-5">
+                            <img src="assets/icons/surprise.png" alt="surprise" class="card-icons">
+                        </div>
+                        <h2 class="en-title mb-2">GIFT REFERENCE</h2>
                         <p>
-                            It is with great pleasure that we announce our upcoming nuptials. 
-                            We would be honored if you could join us in celebrating this joyous occasion as we exchange our vows and begin our journey together as one. 
-                            Further details will be forthcoming. Please save the date and accept our sincerest gratitude in advance for your attendance. Warm regards.
+                            We haven't got a gift list for all of you to see; 
+                            because as you all know we never can agreed. 
+                            but if you'd like to help us start our married life, 
+                            a cash contribution would save a lot of strife!
                         </p>
                     </div>
-                    <div class="flex justify-center flex-wrap reveal fade-bottom">
-                        <div class="time-container">
-                            <div class="timer">
-                                <span id="days"></span>
-                            </div>
-                            <small class="timer-label">DAYS</small>
+                </div>
+            </div>
+        </div>
+        <!-- End of Others -->
+
+        <!-- Save the Date -->
+        <div class="savethedate-container grid">
+            <div class="justify-self-center self-center mx-2 xs:mx-5 sm:mx-10 lg:mx-20">
+                <div class="grid gap-3 mb-5 reveal fade-bottom">
+                    <h2 class="self-title text-lg sm:text-2xl font-bold">Save the Date</h2>
+                    <h3 class="text-2xl sm:text-4xl">Can't Wait to See You</h3>
+                    <img src="assets/icons/leaf.png" alt="Leaf" class="justify-self-center">
+                    <p>
+                        It is with great pleasure that we announce our upcoming nuptials. 
+                        We would be honored if you could join us in celebrating this joyous occasion as we exchange our vows and begin our journey together as one. 
+                        Further details will be forthcoming. Please save the date and accept our sincerest gratitude in advance for your attendance. Warm regards.
+                    </p>
+                </div>
+                <div class="flex justify-center flex-wrap reveal fade-bottom">
+                    <div class="time-container">
+                        <div class="timer">
+                            <span id="days"></span>
                         </div>
-                        <div class="time-container mt-10 duration-2">
-                            <div class="timer">
-                                <span id="hours"></span>
-                            </div>
-                            <small class="timer-label">HOURS</small>
+                        <small class="timer-label">DAYS</small>
+                    </div>
+                    <div class="time-container mt-10 duration-2">
+                        <div class="timer">
+                            <span id="hours"></span>
                         </div>
-                        <div class="time-container">
-                            <div class="timer">
-                                <span id="minutes"></span>
-                            </div>
-                            <small class="timer-label">MINS</small>
+                        <small class="timer-label">HOURS</small>
+                    </div>
+                    <div class="time-container">
+                        <div class="timer">
+                            <span id="minutes"></span>
                         </div>
-                        <div class="time-container mt-10 duration-2">
-                            <div class="timer">
-                                <span id="seconds"></span>
-                            </div>
-                            <small class="timer-label">SECS</small>
+                        <small class="timer-label">MINS</small>
+                    </div>
+                    <div class="time-container mt-10 duration-2">
+                        <div class="timer">
+                            <span id="seconds"></span>
                         </div>
+                        <small class="timer-label">SECS</small>
                     </div>
                 </div>
             </div>
-            <!-- End of Save the Date -->
+        </div>
+        <!-- End of Save the Date -->
 
-            <!-- Gallery -->
-            <div class="py-16 px-10 md:px-20 xl:px-36 text-center" id="gallery">
-                <h2 class="self-title text-2xl font-bold text-brand my-10 reveal fade-bottom">Gallery</h2>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                    <div class="img-container reveal fade-left duration">
-                        <img src="assets/images/archeal_jenny4.jpg"  class="gallery-image" alt="archeal_jenny">
-                    </div>
-                    <div class="img-container reveal fade-left duration">
-                        <img src="assets/images/archeal_jenny2.jpg"  class="gallery-image" alt="archeal_jenny">
-                    </div>
-                    <div class="img-container reveal fade-right lg:fade-left duration">
-                        <img src="assets/images/archeal2.jpg"  class="gallery-image" alt="archeal_jenny">
-                    </div>
-                    <div class="img-container reveal fade-right duration">
-                        <img src="assets/images/jenny2.jpg"  class="gallery-image object-center" alt="jenny">
-                    </div>
-                    <div class="img-container reveal fade-left lg:fade-right duration">
-                        <img src="assets/images/shoes.jpg"  class="gallery-image" alt="shoes">
-                    </div>
-                    <div class="img-container reveal fade-left lg:fade-right duration">
-                        <img src="assets/images/archeal_jenny9.jpg"  class="gallery-image object-center" alt="archeal_jenny">
-                    </div>
-                    <div class="img-container reveal fade-right lg:fade-left duration">
-                        <img src="assets/images/archeal_jenny6.jpg"  class="gallery-image" alt="archeal_jenny">
-                    </div>
-                    <div class="img-container reveal fade-right lg:fade-left duration">
-                        <img src="assets/images/archeal_jenny3.jpg"  class="gallery-image object-center" alt="archeal_jenny">
-                    </div>
-                    <div class="img-container reveal fade-left duration">
-                        <img src="assets/images/archeal_jenny7.jpg"  class="gallery-image" alt="archeal_jenny">
-                    </div>
-                    <div class="img-container reveal fade-left duration lg:hidden">
-                        <img src="assets/images/archeal_jenny5.jpg"  class="gallery-image" alt="archeal_jenny">
-                    </div>
+        <!-- Gallery -->
+        <div class="py-16 px-10 md:px-20 xl:px-36 text-center" id="gallery">
+            <h2 class="self-title text-2xl font-bold text-brand my-10 reveal fade-bottom">Gallery</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="img-container reveal fade-left duration">
+                    <img src="assets/images/archeal_jenny4.jpg"  class="gallery-image" alt="archeal_jenny">
+                </div>
+                <div class="img-container reveal fade-left duration">
+                    <img src="assets/images/archeal_jenny2.jpg"  class="gallery-image" alt="archeal_jenny">
+                </div>
+                <div class="img-container reveal fade-right lg:fade-left duration">
+                    <img src="assets/images/archeal2.jpg"  class="gallery-image" alt="archeal_jenny">
+                </div>
+                <div class="img-container reveal fade-right duration">
+                    <img src="assets/images/jenny2.jpg"  class="gallery-image object-center" alt="jenny">
+                </div>
+                <div class="img-container reveal fade-left lg:fade-right duration">
+                    <img src="assets/images/shoes.jpg"  class="gallery-image" alt="shoes">
+                </div>
+                <div class="img-container reveal fade-left lg:fade-right duration">
+                    <img src="assets/images/archeal_jenny9.jpg"  class="gallery-image object-center" alt="archeal_jenny">
+                </div>
+                <div class="img-container reveal fade-right lg:fade-left duration">
+                    <img src="assets/images/archeal_jenny6.jpg"  class="gallery-image" alt="archeal_jenny">
+                </div>
+                <div class="img-container reveal fade-right lg:fade-left duration">
+                    <img src="assets/images/archeal_jenny3.jpg"  class="gallery-image object-center" alt="archeal_jenny">
+                </div>
+                <div class="img-container reveal fade-left duration">
+                    <img src="assets/images/archeal_jenny7.jpg"  class="gallery-image" alt="archeal_jenny">
+                </div>
+                <div class="img-container reveal fade-left duration lg:hidden">
+                    <img src="assets/images/archeal_jenny5.jpg"  class="gallery-image" alt="archeal_jenny">
                 </div>
             </div>
-            <!-- End of Gallery -->
+        </div>
+        <!-- End of Gallery -->
 
-            <!-- Footer -->
-            <div class="bg-brand-light h-96 py-20 flex items-center justify-center">
-                <div class="relative w-60 reveal fade-down">
-                    <div class="self-title text-xl text-center">
-                        <p>Archeal</p>
-                        <p class="my-3">&</p>
-                        <p>Jenny</p>
+        <!-- Footer -->
+        <div class="bg-brand-light h-96 py-20 flex items-center justify-center">
+            <div class="relative w-60 reveal fade-down">
+                <div class="self-title text-xl text-center">
+                    <p>Archeal</p>
+                    <p class="my-3">&</p>
+                    <p>Jenny</p>
+            
+                </div>
+                <img src="assets/icons/flower-arc.png"  alt="flower-arc" class="absolute" style="top: -77px;
+                right: 25px;
+                z-index: -1;">
+            </div>
+        </div>
+        <div class="text-center py-5">
+            <p>♡ 2023 September 9</p>
+        </div>
+        <!-- End of Footer -->
+    </div>
+
+        <a id="back-to-top" href="#banner" style="display: none">
+            <i class="fa fa-chevron-up" style="margin-top: 8px;"></i>
+        </a>
+
+
+        <script>
+            // Get the button
+            let mybutton = document.getElementById("back-to-top");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            const myTimeout = setTimeout(showClickMe, 3000);
+
+            function showClickMe() {
+                var video = document.getElementById("click-me");
+                video.classList.remove("hidden");
+                var arrow = document.getElementById("arrow");
+                arrow.classList.remove("hidden");
                 
-                    </div>
-                    <img src="assets/icons/flower-arc.png"  alt="flower-arc" class="absolute" style="top: -77px;
-                    right: 25px;
-                    z-index: -1;">
-                </div>
-            </div>
-            <div class="text-center py-5">
-                <p>♡ 2023 September 9</p>
-            </div>
-            <!-- End of Footer -->
+                var img = document.getElementById("heart-container");
+                img.classList.add("hidden");
+            }
 
-            <script>
-                const myTimeout = setTimeout(showClickMe, 3000);
+            function playAudio() {
+                var audio = new Audio('assets/music/Christmas_tree.mp3');
+                audio.currentTime = 12
+                audio.play();
 
-                function showClickMe() {
-                    var video = document.getElementById("click-me");
-                    video.classList.remove("hidden");
-                    var arrow = document.getElementById("arrow");
-                    arrow.classList.remove("hidden");
-                    
-                    var img = document.getElementById("heart-container");
-                    img.classList.add("hidden");
-                }
+                var video = document.getElementById("content");
+                video.classList.remove("hidden");
+                
+                var img = document.getElementById("loader");
+                img.classList.add("hidden");
+                
+            }
+        </script>
 
-                function playAudio() {
-                    var audio = new Audio('assets/music/Christmas_tree.mp3');
-                    audio.currentTime = 12
-                    audio.play();
-
-                    var video = document.getElementById("content");
-                    video.classList.remove("hidden");
-                    
-                    var img = document.getElementById("loader");
-                    img.classList.add("hidden");
-                    
-                }
-            </script>
-
-            <script>
-                function reveal() {
-                    var reveals = document.querySelectorAll(".reveal");
-                    for (var i = 0; i < reveals.length; i++) {
-                        var windowHeight = window.innerHeight;
-                        var elementTop = reveals[i].getBoundingClientRect().top;
-                        var elementVisible = 150;
-                        if (elementTop < windowHeight - elementVisible) {
-                        reveals[i].classList.add("active");
-                        } else {
-                        reveals[i].classList.remove("active");
-                        }
+        <script>
+            function reveal() {
+                var reveals = document.querySelectorAll(".reveal");
+                for (var i = 0; i < reveals.length; i++) {
+                    var windowHeight = window.innerHeight;
+                    var elementTop = reveals[i].getBoundingClientRect().top;
+                    var elementVisible = 150;
+                    if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                    } else {
+                    reveals[i].classList.remove("active");
                     }
                 }
-                
-                window.addEventListener("scroll", reveal);
-            </script>
-
-            <script>
-                function goTo(id) {
-                    triggerNavbarClose()
-                    document.getElementById(id).scrollIntoView({ block: 'start',  behavior: 'smooth' })
-                }
-                function triggerNavbarOpen() {
-                    var element = document.getElementById("navbar");
-                    element.classList.add("slide-black-open");
-
-                    var dark = document.getElementById("dark-container");
-                    dark.classList.add("slide-black-open");
-                    
-                    var bar = document.getElementById("burger");
-                    bar.classList.add("hidden");
-
-                    var times = document.getElementById("times");
-                    times.classList.remove("hidden");
-                }
-                function triggerNavbarClose() {
-                    var element = document.getElementById("navbar");
-                    element.classList.remove("slide-black-open");
-
-                    var dark = document.getElementById("dark-container");
-                    dark.classList.remove("slide-black-open");
-                    
-                    var bar = document.getElementById("burger");
-                    bar.classList.remove("hidden");
-
-                    var times = document.getElementById("times");
-                    times.classList.add("hidden");
-                }
-            </script>
-
-            <script>
-                // date_today = {!! $date_now !!};
-                // Set the date we're counting down to
-                var countDownDate = new Date("Sept 9, 2023 10:00:00").getTime();
-                
-                // Update the count down every 1 second
-                var x = setInterval(function() {
-                
-                  // Get today's date and time
-                  var now = new Date().getTime();
-                    
-                  // Find the distance between now and the count down date
-                  var distance = countDownDate - now;
-                    
-                  // Time calculations for days, hours, minutes and seconds
-                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                  document.getElementById("days").innerHTML = days;
-                  document.getElementById("hours").innerHTML = hours;
-                  document.getElementById("minutes").innerHTML = minutes;
-                  document.getElementById("seconds").innerHTML = seconds;
-                    
-                  // If the count down is over, write some text 
-                  if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("Timer").innerHTML = "EXPIRED";
-                  }
-                }, 1000);
-            </script>
+            }
             
-        </div>
+            window.addEventListener("scroll", reveal);
+        </script>
+
+        <script>
+            function goTo(id) {
+                triggerNavbarClose()
+                document.getElementById(id).scrollIntoView({ block: 'start',  behavior: 'smooth' })
+            }
+            function triggerNavbarOpen() {
+                var element = document.getElementById("navbar");
+                element.classList.add("slide-black-open");
+
+                var dark = document.getElementById("dark-container");
+                dark.classList.add("slide-black-open");
+                
+                var bar = document.getElementById("burger");
+                bar.classList.add("hidden");
+
+                var times = document.getElementById("times");
+                times.classList.remove("hidden");
+            }
+            function triggerNavbarClose() {
+                var element = document.getElementById("navbar");
+                element.classList.remove("slide-black-open");
+
+                var dark = document.getElementById("dark-container");
+                dark.classList.remove("slide-black-open");
+                
+                var bar = document.getElementById("burger");
+                bar.classList.remove("hidden");
+
+                var times = document.getElementById("times");
+                times.classList.add("hidden");
+            }
+        </script>
+
+        <script>
+            // date_today = {!! $date_now !!};
+            // Set the date we're counting down to
+            var countDownDate = new Date("Sept 9, 2023 10:00:00").getTime();
+            
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+            
+              // Get today's date and time
+              var now = new Date().getTime();
+                
+              // Find the distance between now and the count down date
+              var distance = countDownDate - now;
+                
+              // Time calculations for days, hours, minutes and seconds
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+              document.getElementById("days").innerHTML = days;
+              document.getElementById("hours").innerHTML = hours;
+              document.getElementById("minutes").innerHTML = minutes;
+              document.getElementById("seconds").innerHTML = seconds;
+                
+              // If the count down is over, write some text 
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("Timer").innerHTML = "EXPIRED";
+              }
+            }, 1000);
+        </script>
     
-    </body>
+</body>
 </html>
