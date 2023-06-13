@@ -281,44 +281,54 @@
             <div class="others-bg">
                 <div class="grid lg:grid-cols-3 gap-10">
                     <div class="card reveal fade-bottom">
-                        <div class="grid mb-10 mt-5">
-                            <img src="assets/icons/cheers.png" alt="cheers" class="card-icons">
+                        <div class="mb-5">
+                            <div class="grid mb-10 mt-5">
+                                <img src="assets/icons/cheers.png" alt="cheers" class="card-icons">
+                            </div>
+                            <h2 class="en-title">RSVP</h2>
+                            <p>We have reserved seats for you. The favor of your reply is requested on June 30, 2023</p>
                         </div>
-                        <h2 class="en-title mb-2">RSVP</h2>
-                        <p>We have reserved seats for you. The favor of your reply is requested on June 30, 2023</p>
+                        <div class="text-center" style="align-self: end;">
+                            <a onclick="openModal('map-modal')" class="text-brand hover:underline cursor-pointer">See Location</a>
+                        </div>
                     </div>
                     <div class="card reveal fade-bottom md:duration-2">
-                        <div class="grid mb-10 mt-5">
-                            <img src="assets/icons/attire.png" alt="attire" class="card-icons">
-                        </div>
-                        <h2 class="en-title mb-2">ATTIRE</h2>
-                        <div class="mb-2">
-                            <b>Guest:</b>
-                            <span>Semi-formal</span>
-                        </div>
-                        <div>
-                            <b>Principal Sponsors</b>
-                            <p class="mb-1">
-                                <span>Ladies:</span>
-                                <span>Formal Long Gown (Cream or Peach)</span>
+                        <div class="mb-5">
+                            <div class="grid mb-10 mt-5">
+                                <img src="assets/icons/attire.png" alt="attire" class="card-icons">
+                            </div>
+                            <h2 class="en-title">ATTIRE</h2>
+                            <p>
+                                <span class="font-bold">Guest:</span>
+                                <span>Semi-formal</span>
+                            </p>
+                            <h3 class="mt-2 mb-1 en-title">Principal Sponsors</h3>
+                            <p>
+                                <span class="font-bold">Ladies:</span>
+                                <span>Formal Long Gown (Cream or Nude)</span>
                             </p>
                             <p>
-                                <span>Gentleman:</span>
-                                <span>Formal</span>
+                                <span class="font-bold">Gentleman:</span>
+                                <span>formal</span>
                             </p>
                         </div>
                     </div>
                     <div class="card reveal fade-bottom md:duration-3">
-                        <div class="grid mb-10 mt-5">
-                            <img src="assets/icons/surprise.png" alt="surprise" class="card-icons">
+                        <div class="mb-5">
+                            <div class="grid mb-10 mt-5">
+                                <img src="assets/icons/surprise.png" alt="surprise" class="card-icons">
+                            </div>
+                            <h2 class="en-title">GIFT REFERENCE</h2>
+                            <p>
+                                We haven't got a gift list for all of you to see; 
+                                because as you all know we never can agreed. 
+                                but if you'd like to help us start our married life, 
+                                a cash contribution would save a lot of strife!
+                            </p>
                         </div>
-                        <h2 class="en-title mb-2">GIFT REFERENCE</h2>
-                        <p>
-                            We haven't got a gift list for all of you to see; 
-                            because as you all know we never can agreed. 
-                            but if you'd like to help us start our married life, 
-                            a cash contribution would save a lot of strife!
-                        </p>
+                        <div class="text-center" style="align-self: end;">
+                            <a onclick="openModal('gift-modal')" class="text-brand hover:underline cursor-pointer">See Details</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -424,6 +434,117 @@
             <p>♡ 2023 September 9</p>
         </div>
         <!-- End of Footer -->
+
+        <!-- Modal -->
+        <div class="modal hidden" aria-labelledby="modal-title" role="dialog" id="map-modal">
+            <div class="modal-container">
+                <div class="modal-overlay modal-overly-close" id="map-modal-overlay"></div>
+        
+                <!-- This element is to trick the browser into centering the modal contents. -->
+                <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+        
+                <div class="modal-content modal-close" id="map-modal-content">
+                    <div class="modal-header justify-end border-0">
+                        <div class="modal-close-btn">
+                            <i class="fa fa-close text-gray-400 text-sm" onclick="closeModal('map-modal')"></i>
+                        </div>
+                    </div>
+        
+                    <div class="modal-body pt-0 text-brand-blue text-center px-8 lg:px-12" style="height: 76vh;">
+        
+                        <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=prestige tower pasig&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br><style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style><a href="https://embedgooglemap.2yu.co/">html embed google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style></div></div>
+        
+                    </div>
+                    
+                    <div class="modal-footer border-0">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal hidden" aria-labelledby="modal-title" role="dialog" id="gift-modal">
+            <div class="modal-container">
+                <div class="modal-overlay modal-overly-close" id="gift-modal-overlay"></div>
+        
+                <!-- This element is to trick the browser into centering the modal contents. -->
+                <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+        
+                <div class="modal-content modal-close" id="gift-modal-content">
+                    <div class="modal-header justify-end border-0">
+                        <div class="modal-close-btn">
+                            <i class="fa fa-close text-gray-400 text-sm" onclick="closeModal('gift-modal')"></i>
+                        </div>
+                    </div>
+        
+                    <div class="modal-body pt-0 text-brand-blue text-center px-8 lg:px-12">
+        
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 text-center">
+                            <div class="grid gap-3">
+                                <h2 class="text-2xl font-bold">BPI</h2>
+                                <img src="assets/qrcode/archeal_bpi.png" alt="archeal_bpi" >
+                                <div>
+                                    <p class="text-brand">Account Name</p>
+                                    <p>
+                                        Archeal Anie
+                                    </p>
+                                    <p class="text-brand">Account Number</p>
+                                    <p>
+                                        xxxxxxxxxxx393
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="grid gap-3">
+                                <h2 class="text-2xl font-bold">GCASH</h2>
+                                <img src="assets/qrcode/jenny_gcash.png" alt="jenny_gcash" >
+                                <div>
+                                    <p class="text-brand">Account Name</p>
+                                    <p>
+                                        Jenny Marie De Juan
+                                    </p>
+                                    <p class="text-brand">Account Number</p>
+                                    <p>
+                                        09xxxxxxx361
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="grid gap-3">
+                                <h2 class="text-2xl font-bold">MAYA</h2>
+                                <img src="assets/qrcode/jenny_maya.png" alt="jenny_maya" >
+                                <div>
+                                    <p class="text-brand">Account Name</p>
+                                    <p>
+                                        Jenny Marie De Juan
+                                    </p>
+                                    <p class="text-brand">Account Number</p>
+                                    <p>
+                                        09xxxxxx8764
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="grid gap-3">
+                                <h2 class="text-2xl font-bold">UNION BANK</h2>
+                                <img src="assets/qrcode/jenny_union_bank.png" alt="jenny_union_bank" >
+                                <div>
+                                    <p class="text-brand">Account Name</p>
+                                    <p>
+                                        Jenny Marie De Juan
+                                    </p>
+                                    <p class="text-brand">Account Number</p>
+                                    <p>
+                                        xxxx xxxx 7626
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                    
+                    <div class="modal-footer border-0">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Modal -->
     </div>
 
         <a id="back-to-top" href="#banner" style="display: none">
@@ -491,6 +612,30 @@
         </script>
 
         <script>
+            function openModal(id) {
+                var modal = document.getElementById(id);
+                modal.classList.remove("hidden");
+
+                var modal_content = document.getElementById(id+'-content');
+                modal_content.classList.add("modal-show");
+                modal_content.classList.remove("modal-close");
+                
+                var modal_overlay = document.getElementById(id+'-overlay');
+                modal_overlay.classList.add("modal-overly-show");
+                modal_overlay.classList.remove("modal-overly-close");
+            }
+            function closeModal(id) {
+                var modal = document.getElementById(id);
+                modal.classList.add("hidden");
+
+                var modal_content = document.getElementById(id+'-content');
+                modal_content.classList.remove("modal-show");
+                modal_content.classList.add("modal-close");
+                
+                var modal_overlay = document.getElementById(id+'-overlay');
+                modal_overlay.classList.remove("modal-overly-show");
+                modal_overlay.classList.add("modal-overly-close");
+            }
             function goTo(id) {
                 triggerNavbarClose()
                 document.getElementById(id).scrollIntoView({ block: 'start',  behavior: 'smooth' })
