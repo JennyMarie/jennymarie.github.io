@@ -999,15 +999,14 @@ html{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
-.modal-body{
-        height: 76vh;
-        --tw-bg-opacity: 1;
-        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 1.25rem;
-        padding-bottom: 1rem;
-    }
+.modal-body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1rem;
+}
 @media (min-width: 640px) {
 
   .modal-body {
@@ -1219,6 +1218,10 @@ html{
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 .-mt-px {
   margin-top: -1px;
@@ -1477,6 +1480,9 @@ html{
 }
 .pt-8 {
   padding-top: 2rem;
+}
+.text-left {
+  text-align: left;
 }
 .text-center {
   text-align: center;
