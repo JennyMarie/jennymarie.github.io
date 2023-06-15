@@ -65,17 +65,22 @@
 <body>
     <div class="loading-page" id="loader">
         <div class="text-center">
+            <span class="relative flex" id="heart-container">
+                <i class="fa fa-heart" aria-hidden="true" id="popping-heart"></i>
+                <i class="fa fa-heart text-brand font-bold text-2xl lg:text-4xl relative inline-flex" aria-hidden="true"></i>
+            </span>
             <button 
-                class="btn" 
-                style="background-color: #f6a1928c; border: 1px solid white; box-shadow: 0px 0px 17px #ffffffd9;" 
+                class="btn hidden" 
+                style="background-color: #f6a1928c; border: 1px solid white; box-shadow: 0px 0px 17px #ffffffd9;"
                 id="click-me" 
                 onclick="playAudio()"
             >
                 CLICK HERE
             </button>
-            <p class="animate-bounce text-xl" id="arrow">
+            <p class="animate-bounce text-xl hidden" id="arrow">
                 <i class="fa fa-angle-double-up" aria-hidden="true"></i>
             </p>
+            
         </div>
     </div>
     <div class="container hidden" id="content">
@@ -596,6 +601,18 @@
                 } else {
                     mybutton.style.display = "none";
                 }
+            }
+
+            const myTimeout = setTimeout(showClickMe, 3000);
+
+            function showClickMe() {
+                var video = document.getElementById("click-me");
+                video.classList.remove("hidden");
+                var arrow = document.getElementById("arrow");
+                arrow.classList.remove("hidden");
+                
+                var img = document.getElementById("heart-container");
+                img.classList.add("hidden");
             }
 
             function playAudio() {
