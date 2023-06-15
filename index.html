@@ -45,11 +45,6 @@
             }
         }
 
-        .loading-page{
-            object-position: center;
-            background: url('assets/images/ring2.jpg') no-repeat 50%;
-        }
-
         .others-bg:before{
             content: "";
             height: 368px;
@@ -70,19 +65,15 @@
 <body>
     <div class="loading-page" id="loader">
         <div class="text-center">
-            <span class="relative flex" id="heart-container">
-                <i class="fa fa-heart" aria-hidden="true" id="popping-heart"></i>
-                <i class="fa fa-heart text-white font-bold text-2xl lg:text-4xl relative inline-flex" aria-hidden="true"></i>
-            </span>
             <button 
-                class="hidden btn" 
+                class="btn" 
                 style="background-color: #f6a1928c; border: 1px solid white; box-shadow: 0px 0px 17px #ffffffd9;" 
                 id="click-me" 
                 onclick="playAudio()"
             >
                 CLICK HERE
             </button>
-            <p class="animate-bounce text-xl text-white hidden" id="arrow">
+            <p class="animate-bounce text-xl" id="arrow">
                 <i class="fa fa-angle-double-up" aria-hidden="true"></i>
             </p>
         </div>
@@ -119,7 +110,8 @@
 
         <!-- Banner -->
         <div id="banner">
-            <video autoplay muted loop id="walking-video" muted="muted">
+            <img src="assets/images/ring2.jpg" alt="ring" id="ring-img">
+            <video autoplay muted loop id="walking-video" class="hidden" muted="muted">
                 <source src="assets/video/walk_summer_compress.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
@@ -568,6 +560,28 @@
             <i class="fa fa-chevron-up" style="margin-top: 8px;"></i>
         </a>
 
+        <script>
+            const videoElement = document.getElementById("walking-video");
+
+            checkforVideo();
+
+            function checkforVideo() {
+                //Every 500ms, check if the video element has loaded
+                var b = setInterval(()=>{
+                    if(videoElement.readyState >= 3){
+
+                        var video = document.getElementById("walking-video");
+                        video.classList.remove("hidden");
+                        
+                        var img = document.getElementById("ring-img");
+                        img.classList.add("hidden");
+
+                        clearInterval(b);
+
+                    }                   
+                },500);
+            }
+        </script>
 
         <script>
             // Get the button
@@ -582,18 +596,6 @@
                 } else {
                     mybutton.style.display = "none";
                 }
-            }
-
-            const myTimeout = setTimeout(showClickMe, 3000);
-
-            function showClickMe() {
-                var video = document.getElementById("click-me");
-                video.classList.remove("hidden");
-                var arrow = document.getElementById("arrow");
-                arrow.classList.remove("hidden");
-                
-                var img = document.getElementById("heart-container");
-                img.classList.add("hidden");
             }
 
             function playAudio() {
