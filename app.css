@@ -1105,6 +1105,9 @@ html{
           'couple5 couple7 couple8'
           ;
 }
+.gallery-big-img {
+  height: 100%;
+}
 @keyframes fade-bottom {
         0% {
             transform: translateY(50px);
@@ -1197,6 +1200,10 @@ html{
               'couple8'
             ;
         }
+
+        .gallery-big-img {
+    height: 20rem;
+  }
     }
 @media (max-width: 425px) {
         .title{
@@ -1622,7 +1629,6 @@ html{
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-
 @media (min-width: 640px) {
     .sm\:fade-bottom.active {
         animation: fade-bottom 1s ease-in;
@@ -1634,7 +1640,6 @@ html{
         animation: fade-right 1s ease-in;
     }
 }
-
 @media (min-width: 768px) {
     
     .md\:duration-2{
@@ -1644,7 +1649,6 @@ html{
         animation-duration: 3s !important;
     }
 }
-
 @media (prefers-color-scheme: dark) {
 
   .dark\:border-gray-700 {
@@ -1677,7 +1681,6 @@ html{
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
-
 @media (min-width: 424px) {
 
   .xs\:mx-5 {
@@ -1694,7 +1697,6 @@ html{
          column-gap: 5rem;
   }
 }
-
 @media (min-width: 640px) {
 
   .sm\:mx-10 {
@@ -1795,7 +1797,6 @@ html{
     line-height: 1.75rem;
   }
 }
-
 @media (min-width: 768px) {
 
   .md\:mr-5 {
@@ -1835,7 +1836,6 @@ html{
     padding-top: 6rem;
   }
 }
-
 @media (min-width: 1024px) {
 
   .lg\:mx-20 {
@@ -1880,7 +1880,6 @@ html{
     line-height: 2.5rem;
   }
 }
-
 @media (min-width: 1280px) {
 
   .xl\:px-36 {
