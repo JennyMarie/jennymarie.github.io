@@ -1,0 +1,580 @@
+<html lang="en">
+    <head>
+    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="OdilwJd73im7J4faQSAFpzRc44wiHsKqeyoI4HKl">
+        <link rel="icon" href="ej-assets/icons/ej-logo.png">
+
+        <meta property="og:title" content="Emmanuel &amp; Jessica">
+        <meta property="og:description" content="1 John 4:18-19 - There is no fear in love. But perfect love drives out fear, because fear has to do with punishment. The one who fears is not made perfect in love.">
+        <meta property="og:image" content="ej-assets/images/archeal_jenny2.jpg">
+        <meta property="og:url" content="/">
+        <meta property="og:type" content="website">
+
+        <!-- Twitter -->
+        <meta name="twitter:title" content="Emmanuel &amp; Jessica">
+        <meta name="twitter:description" content="1 John 4:18-19 - There is no fear in love. But perfect love drives out fear, because fear has to do with punishment. The one who fears is not made perfect in love.">
+        <meta name="twitter:image" content="ej-assets/images/archeal_jenny2.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <title>Emmanuel &amp; Jessica</title>
+        <meta name="description" content="1 John 4:18-19 - There is no fear in love. But perfect love drives out fear, because fear has to do with punishment. The one who fears is not made perfect in love.">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            @font-face {
+                font-family: 'BRIGHTWALL';
+                src: url('ej-assets/fonts/brightwall.otf');
+            }
+
+            @font-face {
+                font-family: 'CenturyGothic';
+                src: url('ej-assets/fonts/cormorant-garamond.ttf');
+            }
+
+            @font-face {
+                font-family: 'CORMORANT';
+                src: url('ej-assets/fonts/cormorant-garamond.ttf');
+            }
+
+            .savethedate-container{
+                background: url('ej-assets/images/ejp2.jpeg');
+                opacity: unset !important;
+            }
+            
+            @media (max-width: 940px) {
+                .savethedate-container{
+                    background: url('ej-assets/images/archeal_jenny8.jpg') #00000033;
+                    background-blend-mode: multiply;
+                }
+            }
+
+            .others-bg:before{
+                content: "";
+                height: 368px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: -1;
+                object-position: center;
+            }
+
+            .en-title, .en-main-title {
+                font-weight: 500 !important;
+            }
+
+            .en-main-title {
+                text-shadow: unset !important;
+            }
+        </style>
+
+        <!-- Styles -->
+        <link href="app.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="flex justify-center items-center bg-brand-light w-full h-screen hidden" id="loader">
+            <i class="fa fa-heart-o animate-ping text-brand font-bold text-2xl lg:text-4xl" aria-hidden="true" ></i>
+        </div>
+        <div class="container" id="content">
+            <!-- Header -->
+            <header>
+                <div class="header">
+                    <div class="lists-container">
+                        <span onclick="goTo('banner')" class="list">HOME</span>
+                        <span onclick="goTo('groom_bride')" class="list">COUPLE</span>
+                        <span onclick="goTo('entourage')" class="list">ENTOURAGE</span>
+                        <span onclick="goTo('others')" class="list text-center">INFO</span>
+                        <span onclick="goTo('gallery')" class="list">GALLERY</span>
+                    </div>
+                    <div class="sm:hidden">
+                        <i class="fa fa-bars" aria-hidden="true" onclick="triggerNavbarOpen()" id="burger"></i>
+                    </div>
+                </div>
+                <div class="fixed w-full h-full z-40 bg-black-trans slide-black-close" id="navbar">
+                    <div class="bg-white h-full slide-left-close relative" id="dark-container" style="max-width: 300px; min-width: 279px;float: right;">
+                        <i class="fa fa-times hidden header" aria-hidden="true" onclick="triggerNavbarClose()" id="times"></i>
+                        <div class="grid p-16 gap-5">
+                            <span onclick="goTo('banner')" class="list">HOME</span>
+                            <span onclick="goTo('groom_bride')" class="list">COUPLE</span>
+                            <span onclick="goTo('entourage')" class="list">ENTOURAGE</span>
+                            <span onclick="goTo('others')" class="list">INFO</span>
+                            <span onclick="goTo('gallery')" class="list">GALLERY</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- End of Header -->
+
+            <!-- Banner -->
+            <section id="banner">
+                <img src="ej-assets/images/ejp2.jpeg" alt="ring" id="ring-img">
+                <video autoplay muted loop id="walking-video" class="hidden">
+                    <source src="ej-assets/video/ej3.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <div class="banner-title">
+                    <h1 class="title">Emmanuel & Jessica</h1>
+                    <h2 class="sub-title mb-10">20TH JULY, 2024 | 04:00 PM</h2>
+                    <i class="fa fa-heart-o heart" aria-hidden="true" onclick="goTo('groom_bride')"></i>    
+                </div>
+            </section>
+            <!-- End of Banner -->
+
+            <!-- Groom Bride -->
+            <section class="bg-white relative z-0 mt-20">
+                <div class="px-5 py-0 md:px-10 md:py-10 lg:px-20 lg:py-10">
+                    <div class="flex flex-col lg:flex-row items-center justify-center bg-brand-light gap-5 lg:gap-20 h-screen lg:h-[371px]">
+                        <div class="self-center">
+                            <h2 class="self-title text-base sm:text-xl text-brand">Groom</h2>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold">Emmanuel</h2>
+                        </div>
+                        <div class="bg-white flex flex-col justify-center overflow-hidden relative rounded-full p-5 h-[250px] w-[250px] sm:h-[320px] sm:w-[320px] md:h-[420px] md:w-[420px]" style="box-shadow: 0 0 6.1px 3.9px rgba(28,31,86,.06);">
+            
+                            <div class="overflow-hidden rounded-full">
+            
+                                <img src="ej-assets/images/ejb1.png" alt="ej" class="w-full h-full object-cover rounded-full">
+            
+                            </div>
+            
+                        </div>
+                        <div class="self-center">
+                            <h2 class="self-title text-base sm:text-xl text-brand">Bride</h2>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold">Jessica</h2>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            <!-- End of Groom Bride -->
+
+            <!-- Entourage -->
+            <div class="text-center py-16 px-5 sm:px-10 md:px-20 lg:px-40 xl:px-80 relative" id="entourage">
+                <div class="grid gap-3 mb-5 reveal fade-bottom">
+                    <h2 class="en-main-title mb-2">Entourage</h2>
+                    <h3 class="text-2xl sm:text-4xl">To walk us down the aisle</h3>
+                    <img src="ej-assets/icons/flower1.jpg" alt="flower-1" class="justify-self-center w-80">
+                </div>
+                <div class="grid xs:grid-cols-2 gap-2 mb-1 reveal fade-bottom">
+                    <div>
+                        <p class="en-sub-title">PARENTS OF THE GROOM</p>
+                        <h3>Mr. Diosdado Botas</h3>
+                        <h3>Mrs. Marilou Botas</h3>
+                    </div>
+                    <div>
+                        <p class="en-sub-title">PARENTS OF THE BRIDE</p>
+                        <h3>Mr. Efren Germono</h3>
+                        <h3>Mrs. Jocelyn Germono</h3>
+                    </div>
+                </div>
+            
+                <div class="reveal fade-bottom">
+                    <h3 class="en-sub-title">OFFICIANT</h3>
+                    <p>Ptr. Jovitmar Bumarlong</p>
+                </div>
+            
+                <h3 class="en-main-title reveal fade-bottom">Lifetime Godparents</h3>
+            
+                <div class="sponsors grid xs:grid-cols-2 xs:gap-x-20 mb-5 reveal fade-bottom">
+                    <p>Mr. Reynaldo Nobl</p>
+                    <p>Mrs. Myrna Noble</p>
+                    <p>Mr. Felipe Botas Jr</p>
+                    <p>Mrs. Marites Botas</p>
+                    <p>Mr. Joel Ramire</p>
+                    <p>Mrs. Juby Valdez</p>
+                    <p>Mr. Herminio Cruz</p>
+                    <p>Mrs. Ma. Cecilia Cruz</p>
+                    <p>Mr. Sherwynne Agub</p>
+                    <p>Mrs. Klaribel Domingo</p>
+                    <p>Dr. Darvi Mag-iba</p>
+                    <p>Ms. Vilma Forbes</p>
+                </div>
+            
+                <h3 class="en-main-title reveal fade-bottom">Secondary Sponsors</h3>
+            
+                <div class="grid xs:grid-cols-2 gap-2 mb-5 reveal fade-bottom">
+                    <div>
+                        <h3 class="en-sub-title">BEST MAN</h3>
+                        <p>Dr. Eliezer Botas</p>
+                    </div>
+                    <div>
+                        <h3 class="en-sub-title">MAID OF HONOR</h3>
+                        <p>Ms. Elaiza Lee Garcia</p>
+                    </div>
+                </div>
+            
+                <div class="grid sm:grid-cols-2 gap-2 mb-5 reveal fade-bottom">
+                    <div>
+                        <h3 class="en-sub-title">GROOMSMEN</h3>
+                        <p>Mr. Mark Daren Pere</p>
+                        <p>Mr. Joel Byron Ramirez</p>
+                    </div>
+                    <div>
+                        <h3 class="en-sub-title">BRIDESMAID</h3>
+                        <p>Ms. Judie Ann de Mesa</p>
+                        <p>Ms. Jazmine Ramirez</p>
+                    </div>
+                </div>
+            
+                <div class="grid sm:grid-cols-3 gap-2 mb-10 reveal fade-bottom">
+                    <div>
+                        <h3 class="en-sub-title">CANDLE</h3>
+                        <p>Mr. Ariel Conversion</p>
+                        <p>Ms. Joy Marie Salagubang</p>
+                    </div>
+                    <div>
+                        <h3 class="en-sub-title">VEIL</h3>
+                        <p>Mr. Messiah Botas</p>
+                        <p>Ms. Jhoycel Ann Ramirez</p>
+                    </div>
+                    <div>
+                        <h3 class="en-sub-title">CORD</h3>
+                        <p>Mr. Jeffrey Germono</p>
+                        <p>Ms. Jhanessa Ramirez</p>
+                    </div>
+                </div>
+            
+                <div class="grid sm:grid-cols-3 gap-2 mb-10 reveal fade-bottom">
+                    <div>
+                        <h3 class="en-sub-title">RING BEARER</h3>
+                        <p>Zanniel Reyes</p>
+                    </div>
+                    <div>
+                        <h3 class="en-sub-title">COIN BEARER</h3>
+                        <p>Denrix Adriel Sobrevilla</p>
+                    </div>
+                    <div>
+                        <h3 class="en-sub-title">BIBLE BEARER</h3>
+                        <p>Zion Yannis Noble</p>
+                    </div>
+                </div>
+                <div class="reveal fade-bottom mb-10">
+                    <h3 class="en-sub-title">FLOWER GIRLS</h3>
+                    <div class="grid grid-cols-3 gap-2">
+                        <p>Maria Elisha Cruz</p>
+                        <p>Lois Amaraah Domingo</p>
+                        <p>Naomi Cruz</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Entourage -->
+
+            <!-- Others -->
+            <div class="others bg-brand-light" id="others">
+                <div class="others-bg">
+                    <h2 class="self-title text-2xl font-bold text-white my-10 text-center">Notes</h2>
+                    <div class="grid lg:grid-cols-3 gap-10">
+                        <div class="card reveal fade-bottom">
+                            <div class="mb-5">
+                                <h2 class="en-main-title">RSVP</h2>
+                                <p>
+                                    WE HAVE RESERVED (1) SEAT FOR YOU. </br>
+                                    We have invited limited number of guests who are dear to our hearts. 
+                                    It is our hope that you can come and stay until the end of our special day. 
+                                    So, the favor of your response is requested 
+                                    on or before JUNE 20, 2024.
+                                    To confirm your attendance, please contact our wedding coordinator.
+                                    Roch/Mayn 0917-890-9158/0917-118-9236
+                                </p>
+                            </div>
+                            <div class="text-center">
+                                <a href="https://fb.me/g/p_AMpABbzZGXTVG7Vb/5sXVVZYs?ref=share" target="_blank" class="btn">See attendance</a>
+                            </div>
+                        </div>
+                        <div class="card reveal fade-bottom md:duration-2">
+                            <div class="mb-5">
+                                <h2 class="en-main-title">Dress Code</h2>
+                                <p>
+                                    Please come in your semi-formal attire.
+                                    We encourage you to dress in shades of dusty blue and beige.
+                                </p>
+                                <div class="flex justify-center mt-10">
+                                    <img src="ej-assets/colors/dusty-blue.png" alt="dusty-blue" class="w-16">
+                                    <img src="ej-assets/colors/dark-dusty-blue.png" alt="dark-dusty-blue" class="w-16">
+                                    <img src="ej-assets/colors/beige.png" alt="beige" class="w-16">
+                                    <img src="ej-assets/colors/dark-beige.png" alt="dark-beige" class="w-16">
+                                </div>
+                            </div>
+                            <div class="text-center" style="align-self: end;">
+                                <button onclick="openModal('map-modal')" class="btn">See Location</button>
+                            </div>
+                        </div>
+                        <div class="card reveal fade-bottom md:duration-3">
+                            <div class="mb-5">
+                                <h2 class="en-main-title">Gift Reference</h2>
+                                <p>
+                                    With all that we have, we’ve been truly blessed. Your presence and prayers are all that we request. 
+                                    However, if it is your wish to bless us with gift, we would greatly appreciate a monetary token to help us start our married life.
+                                </p>
+                            </div>
+                            <div class="text-center" style="align-self: end;">
+                                <button onclick="openModal('gift-modal')" class="btn">See Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="ej-assets/icons/flower-left.png" alt="flower-2" class="absolute w-32 sm:w-72 top-0 left-0 z-1">
+                <img src="ej-assets/icons/flower-right.png" alt="flower-2" class="absolute w-32 sm:w-72 bottom-0 right-0 z-1">
+            </div>
+            <!-- End of Others -->
+
+            <!-- Save the Date -->
+            <div class="savethedate-container grid relative">
+                <div class="absolute bg-black-trans w-full h-full"></div>
+                <div class="justify-self-center self-center mx-2 xs:mx-5 sm:mx-10 lg:mx-20">
+                    <div class="grid gap-3 mb-10 reveal fade-bottom">
+                        <h2 class="self-title text-lg sm:text-2xl font-bold" style="color:rgb(246 161 146 / var(--tw-text-opacity))">Save the Date</h2>
+                        <h3 class="text-2xl sm:text-4xl">Can't Wait to See You</h3>
+                        <img src="ej-assets/icons/leaf.png" alt="Leaf" class="justify-self-center">
+                        <p>
+                            It is with great pleasure that we announce our upcoming nuptials. 
+                            We would be honored if you could join us in celebrating this joyous occasion as we exchange our vows and begin our journey together as one. 
+                            Further details will be forthcoming. Please save the date and accept our sincerest gratitude in advance for your attendance. Warm regards.
+                        </p>
+                    </div>
+                    <div class="flex justify-center flex-wrap reveal fade-bottom">
+                        <div class="time-container">
+                            <div class="timer">
+                                <span id="days"></span>
+                            </div>
+                            <small class="timer-label">DAYS</small>
+                        </div>
+                        <div class="time-container mt-10 duration-2">
+                            <div class="timer">
+                                <span id="hours"></span>
+                            </div>
+                            <small class="timer-label">HOURS</small>
+                        </div>
+                        <div class="time-container">
+                            <div class="timer">
+                                <span id="minutes"></span>
+                            </div>
+                            <small class="timer-label">MINS</small>
+                        </div>
+                        <div class="time-container mt-10 duration-2">
+                            <div class="timer">
+                                <span id="seconds"></span>
+                            </div>
+                            <small class="timer-label">SECS</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Save the Date -->
+
+            <!-- Gallery -->
+            <div class="py-16 px-10 md:px-20 xl:px-36 text-center" id="gallery">
+                <h2 class="self-title text-2xl font-bold text-brand my-10 reveal fade-bottom">Gallery</h2>
+            
+                <div class="grid-container">
+                    <div class="img-container reveal fade-left sm:fade-right duration dancing_together">
+                        <img src="ej-assets/images/ejb3.jpeg"  class="gallery-image gallery-big-img object-center" alt="Emmanuel_jessica">
+                    </div>
+                    <div class="img-container reveal fade-bottom sm:fade-left duration sitting_in_grass">
+                        <img src="ej-assets/images/ejbr3.jpeg"  class="gallery-image" alt="Emmanuel_jessica">
+                    </div>
+                    <div class="img-container reveal fade-left sm:fade-bottom holding_hands_billboard">
+                        <img src="ej-assets/images/ejp2.jpeg"  class="gallery-image object-top" alt="Emmanuel_jessica">
+                    </div>
+                    <div class="img-container reveal fade-bottom sm:fade-left duration khel_solo">
+                        <img src="ej-assets/images/emman1.jpeg"  class="gallery-image" alt="Emmanuel">
+                    </div>
+            
+                    <div class="img-container reveal fade-left sm:fade-right duration shoes">
+                        <img src="ej-assets/images/jessica1.jpeg"  class="gallery-image object-bottom" alt="shoes">
+                    </div>
+            
+                    <div class="img-container reveal fade-bottom sm:fade-bottom duration holding_hands_park">
+                        <img src="ej-assets/images/ejp3.jpeg"  class="gallery-image object-center" alt="Emmanuel_jessica">
+                    </div>
+                    <div class="img-container reveal fade-left sm:fade-left duration walking_pedestrian">
+                        <img src="ej-assets/images/ejbr4.jpeg"  class="gallery-image object-center gallery-big-img" alt="Emmanuel_jessica">
+                    </div>
+            
+                    <div class="img-container reveal fade-bottom sm:fade-right duration sitting_in_pavement">
+                        <img src="ej-assets/images/ejb2.jpeg"  class="gallery-image" alt="Emmanuel_jessica">
+                    </div>
+                    <div class="img-container reveal fade-left sm:fade-bottom duration showing_shoes">
+                        <img src="ej-assets/images/ejbr5.jpeg"  class="gallery-image" alt="Emmanuel_jessica">
+                    </div>
+                </div>
+            </div>
+            <!-- End of Gallery -->
+
+            <!-- Footer -->
+            <div class="bg-brand-light h-96 py-20 flex items-center justify-center">
+                <div class="w-60 reveal fade-down">
+                    <div class="self-title text-xl text-center relative">
+                        <p>Emmanuel & Jessica</p>
+                        <img src="ej-assets/icons/flower1.png" alt="logo">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center py-5">
+                <p><i class="fa fa-heart-o text-xs" aria-hidden="true"></i> 2024 July 20</p>
+            </div>
+            <!-- End of Footer -->
+
+            <a id="back-to-top" href="#banner" style="display: none">
+                <i class="fa fa-chevron-up" style="margin-top: 8px;"></i>
+            </a>
+    
+            <script>
+                const videoElement = document.getElementById("walking-video");
+
+                checkforVideo();
+
+                function checkforVideo() {
+                    //Every 500ms, check if the video element has loaded
+                    var b = setInterval(()=>{
+                        if(videoElement.readyState >= 3){
+
+                            var video = document.getElementById("walking-video");
+                            video.classList.remove("hidden");
+                            
+                            var img = document.getElementById("ring-img");
+                            img.classList.add("hidden");
+
+                            clearInterval(b);
+
+                        }                   
+                    },500);
+                }
+            </script>
+
+            <script>
+                // Get the button
+                let mybutton = document.getElementById("back-to-top");
+
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() {scrollFunction()};
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        mybutton.style.display = "block";
+                    } else {
+                        mybutton.style.display = "none";
+                    }
+                }
+
+
+                const myTimeout = setTimeout(showClickMe, 3000);
+
+                function showClickMe() {
+                    var video = document.getElementById("click-me");
+                    video.classList.remove("hidden");
+                    var arrow = document.getElementById("arrow");
+                    arrow.classList.remove("hidden");
+                    
+                    var img = document.getElementById("heart-container");
+                    img.classList.add("hidden");
+                }
+
+                function playAudio() {
+                        
+                    let music = "{{url('storage/ej-assets/music/Christmas_tree.mp3')}}"
+                    var audio = new Audio(music);
+                    audio.currentTime = 12
+                    // audio.play();
+
+                    var video = document.getElementById("content");
+                    video.classList.remove("hidden");
+                    
+                    var img = document.getElementById("loader");
+                    img.classList.add("hidden");
+                    
+                }
+
+            </script>
+
+            <script>
+                function reveal() {
+                    var reveals = document.querySelectorAll(".reveal");
+                    for (var i = 0; i < reveals.length; i++) {
+                        var windowHeight = window.innerHeight;
+                        var elementTop = reveals[i].getBoundingClientRect().top;
+                        var elementVisible = 150;
+                        if (elementTop < windowHeight - elementVisible) {
+                        reveals[i].classList.add("active");
+                        } else {
+                        reveals[i].classList.remove("active");
+                        }
+                    }
+                }
+                
+                window.addEventListener("scroll", reveal);
+            </script>
+
+            <script>
+                function goTo(id) {
+                    triggerNavbarClose()
+                    document.getElementById(id).scrollIntoView({ block: 'start',  behavior: 'smooth' })
+                }
+                function triggerNavbarOpen() {
+                    var element = document.getElementById("navbar");
+                    element.classList.add("slide-black-open");
+
+                    var dark = document.getElementById("dark-container");
+                    dark.classList.add("slide-black-open");
+                    
+                    var bar = document.getElementById("burger");
+                    bar.classList.add("hidden");
+
+                    var times = document.getElementById("times");
+                    times.classList.remove("hidden");
+                }
+                function triggerNavbarClose() {
+                    var element = document.getElementById("navbar");
+                    element.classList.remove("slide-black-open");
+
+                    var dark = document.getElementById("dark-container");
+                    dark.classList.remove("slide-black-open");
+                    
+                    var bar = document.getElementById("burger");
+                    bar.classList.remove("hidden");
+
+                    var times = document.getElementById("times");
+                    times.classList.add("hidden");
+                }
+            </script>
+
+            <script>
+                // date_today = {!! $date_now !!};
+                // Set the date we're counting down to
+                var countDownDate = new Date("July 20, 2024 16:00:00").getTime();
+                
+                // Update the count down every 1 second
+                var x = setInterval(function() {
+                
+                  // Get today's date and time
+                  var now = new Date().getTime();
+                    
+                  // Find the distance between now and the count down date
+                  var distance = countDownDate - now;
+                    
+                  // Time calculations for days, hours, minutes and seconds
+                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                  document.getElementById("days").innerHTML = days;
+                  document.getElementById("hours").innerHTML = hours;
+                  document.getElementById("minutes").innerHTML = minutes;
+                  document.getElementById("seconds").innerHTML = seconds;
+                    
+                  // If the count down is over, write some text 
+                  if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("Timer").innerHTML = "EXPIRED";
+                  }
+                }, 1000);
+            </script>
+            
+        </div>
+    
+    </body>
+</html>
