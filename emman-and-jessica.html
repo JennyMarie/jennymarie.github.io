@@ -76,10 +76,37 @@
 
     </head>
     <body>
-        <div class="flex justify-center items-center bg-brand-light w-full h-screen hidden" id="loader">
-            <i class="fa fa-heart-o animate-ping text-brand font-bold text-2xl lg:text-4xl" aria-hidden="true" ></i>
+        <div class="loading-page" id="loader">
+            <div class="text-center">
+                <div id="heart-container" class="flex gap-10">
+                    <span class="relative flex">
+                        <i class="fa fa-heart" aria-hidden="true" id="popping-heart"></i>
+                        <i class="fa fa-heart text-brand font-bold text-2xl lg:text-4xl relative inline-flex" aria-hidden="true"></i>
+                    </span>
+                    <span class="relative flex">
+                        <i class="fa fa-heart" aria-hidden="true" id="popping-heart"></i>
+                        <i class="fa fa-heart text-brand font-bold text-2xl lg:text-4xl relative inline-flex" aria-hidden="true"></i>
+                    </span>
+                    <span class="relative flex">
+                        <i class="fa fa-heart" aria-hidden="true" id="popping-heart"></i>
+                        <i class="fa fa-heart text-brand font-bold text-2xl lg:text-4xl relative inline-flex" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <button 
+                    class="btn hidden bg-brand" 
+                    style="border: 1px solid white; box-shadow: 0px 0px 17px #ffffffd9;"
+                    id="click-me" 
+                    onclick="playAudio()"
+                >
+                    CLICK HERE
+                </button>
+                <p class="animate-bounce text-xl hidden" id="arrow">
+                    <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                </p>
+                
+            </div>
         </div>
-        <div class="container" id="content">
+        <div class="container hidden" id="content">
             <!-- Header -->
             <header>
                 <div class="header">
@@ -113,30 +140,77 @@
             <section id="banner">
                 <img src="ej-assets/images/ejp2.jpeg" alt="ring" id="ring-img">
                 <video autoplay muted loop id="walking-video" class="hidden">
-                    <source src="ej-assets/video/ej3.mp4" type="video/mp4">
+                    <source src="ej-assets/video/ej5.mov" type="video/mp4">
                     Your browser does not support HTML5 video.
                 </video>
                 <div class="banner-title">
                     <h1 class="title">Emmanuel & Jessica</h1>
-                    <h2 class="sub-title mb-10">20TH JULY, 2024 | 04:00 PM</h2>
-                    <i class="fa fa-heart-o heart" aria-hidden="true" onclick="goTo('groom_bride')"></i>    
+                    <div class="text-center text-sm md:text-base">
+                        <p class="tracking-wider">
+                            "And we know that in all things God works for the good of those who love him, 
+                            <br class="hidden md:block">
+                            who have been called according to his purpose."
+                        </p>
+                        <p class="">Romans 8:28</p>
+                    </div>
                 </div>
             </section>
             <!-- End of Banner -->
 
+            <!-- Save the Date -->
+            <section class="mt-20 pb-16">
+                <div class="text-center">
+                    <h2 class="title text-3xl mb-5 text-brand">July 20th, 2024</h2>
+                    <p>4:00 PM</p>
+                    <p>Casa Ibayo Trinidad</p>
+                    <p> Narra St. Santa Cruz, Laguna</p>
+                </div>
+                <div class="flex justify-center flex-wrap gap-10 md:gap-2 lg:gap-6 ml-16 md:ml-0 lg:ml-[6.5rem]">
+                    <div class="time-container-flower reveal fade-bottom">
+                        <div class="timer-flower">
+                            <span id="days"></span>
+                            <small class="timer-label text-black">DAYS</small>
+                        </div>
+                        <img src="ej-assets/icons/decor-2.png" alt="decor" class="absolute top-12 -left-12">
+                    </div>
+                    <div class="time-container-flower reveal fade-bottom duration-2">
+                        <div class="timer-flower">
+                            <span id="hours"></span>
+                            <small class="timer-label text-black">HOURS</small>
+                        </div>
+                        <img src="ej-assets/icons/decor-2.png" alt="decor" class="absolute top-12 -left-12">
+                    </div>
+                    <div class="time-container-flower reveal fade-bottom">
+                        <div class="timer-flower">
+                            <span id="minutes"></span>
+                            <small class="timer-label text-black">MINS</small>
+                        </div>
+                        <img src="ej-assets/icons/decor-2.png" alt="decor" class="absolute top-12 -left-12">
+                    </div>
+                    <div class="time-container-flower reveal fade-bottom duration-2">
+                        <div class="timer-flower">
+                            <span id="seconds"></span>
+                            <small class="timer-label text-black">SECS</small>
+                        </div>
+                        <img src="ej-assets/icons/decor-2.png" alt="decor" class="absolute top-12 -left-12">
+                    </div>
+                </div>
+            </section>
+            <!-- End Save the Date -->
+
             <!-- Groom Bride -->
-            <section class="bg-white relative z-0 mt-20">
+            <section class="h-screen relative z-0 my-20 flex justify-center items-center">
                 <div class="px-5 py-0 md:px-10 md:py-10 lg:px-20 lg:py-10">
-                    <div class="flex flex-col lg:flex-row items-center justify-center bg-brand-light gap-5 lg:gap-20 h-screen lg:h-[371px]">
+                    <div class="flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-20 h-screen lg:h-[371px]">
                         <div class="self-center">
                             <h2 class="self-title text-base sm:text-xl text-brand">Groom</h2>
                             <h2 class="text-3xl sm:text-4xl font-extrabold">Emmanuel</h2>
                         </div>
-                        <div class="bg-white flex flex-col justify-center overflow-hidden relative rounded-full p-5 h-[250px] w-[250px] sm:h-[320px] sm:w-[320px] md:h-[420px] md:w-[420px]" style="box-shadow: 0 0 6.1px 3.9px rgba(28,31,86,.06);">
+                        <div class="flex flex-col justify-center overflow-hidden relative rounded-full p-5 h-[250px] w-[250px] sm:h-[520px] sm:w-[520px] md:h-[520px] md:w-[520px]" style="box-shadow: 0 0 6.1px 3.9px rgba(28,31,86,.06);">
             
                             <div class="overflow-hidden rounded-full">
             
-                                <img src="ej-assets/images/ejb1.png" alt="ej" class="w-full h-full object-cover rounded-full">
+                                <img src="ej-assets/images/ejb1.png" alt="archeal_jenny" class="w-full h-full object-cover rounded-full">
             
                             </div>
             
@@ -147,12 +221,73 @@
                         </div>
                     </div>
                 </div>
-                
             </section>
             <!-- End of Groom Bride -->
 
+            <!-- Others -->
+            <div class="others-ej bg-brand-light" id="others">
+                <div class="others-bg">
+                    <div class="grid lg:grid-cols-4 gap-5 mt-20">
+                        <div class="card reveal fade-bottom">
+                            <div class="mb-5">
+                                <h2 class="en-main-title">RSVP</h2>
+                                <p class="font-bold">WE HAVE RESERVED (1) SEAT FOR YOU.</p>
+                                <p>
+                                    We have invited limited number of guests who are dear to our hearts. 
+                                    It is our hope that you can come and stay until the end of our special day. 
+                                    So, the favor of your response is requested 
+                                    <span class="font-bold">on or before JUNE 20, 2024.</span>
+                                    To confirm your attendance, please contact our wedding coordinator.
+                                    Roch/Mayn 0917-890-9158/0917-118-9236
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card reveal fade-bottom md:duration-2">
+                            <div class="mb-5">
+                                <h2 class="en-main-title">Dress Code</h2>
+                                <p>
+                                    Please come in your semi-formal attire.
+                                    We encourage you to dress in shades of dusty blue and beige.
+                                </p>
+                                <div class="flex justify-center mt-10">
+                                    <img src="ej-assets/colors/dusty-blue.png" alt="dusty-blue" class="w-16">
+                                    <img src="ej-assets/colors/dark-dusty-blue.png" alt="dark-dusty-blue" class="w-16">
+                                </div>
+                                <div class="flex justify-center">
+                                    <img src="ej-assets/colors/beige.png" alt="beige" class="w-16">
+                                    <img src="ej-assets/colors/dark-beige.png" alt="dark-beige" class="w-16">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card reveal fade-bottom md:duration-3">
+                            <div class="mb-5">
+                                <h2 class="en-main-title">Location</h2>
+                                <p>
+                                    Scan QR code for Google Maps direction
+                                </p>
+                                <div class="flex justify-center mt-10">
+                                    <img src="ej-assets/qrcode/qr_location.jpg" alt="qr_location" class="w-40">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card reveal fade-bottom md:duration-3">
+                            <div class="mb-5">
+                                <h2 class="en-main-title">Gift Reference</h2>
+                                <p>
+                                    With all that we have, we’ve been truly blessed. Your presence and prayers are all that we request. 
+                                    However, if it is your wish to bless us with gift, we would greatly appreciate a monetary token to help us start our married life.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="ej-assets/icons/flower-left.png" alt="flower-2" class="absolute w-32 sm:w-72 top-0 left-0 z-1">
+                <img src="ej-assets/icons/flower-right.png" alt="flower-2" class="absolute w-32 sm:w-72 bottom-0 right-0 z-1">
+            </div>
+            <!-- End of Others -->
+
             <!-- Entourage -->
-            <div class="text-center py-16 px-5 sm:px-10 md:px-20 lg:px-40 xl:px-80 relative" id="entourage">
+            <div class="text-center py-16 px-5 sm:px-10 md:px-20 lg:px-40 xl:px-80 relative mt-10" id="entourage">
                 <div class="grid gap-3 mb-5 reveal fade-bottom">
                     <h2 class="en-main-title mb-2">Entourage</h2>
                     <h3 class="text-2xl sm:text-4xl">To walk us down the aisle</h3>
@@ -179,11 +314,11 @@
                 <h3 class="en-main-title reveal fade-bottom">Lifetime Godparents</h3>
             
                 <div class="sponsors grid xs:grid-cols-2 xs:gap-x-20 mb-5 reveal fade-bottom">
-                    <p>Mr. Reynaldo Nobl</p>
+                    <p>Mr. Reynaldo Noble</p>
                     <p>Mrs. Myrna Noble</p>
-                    <p>Mr. Felipe Botas Jr</p>
+                    <p>Mr. Felipe Botas Jr.</p>
                     <p>Mrs. Marites Botas</p>
-                    <p>Mr. Joel Ramire</p>
+                    <p>Mr. Joel Ramirez</p>
                     <p>Mrs. Juby Valdez</p>
                     <p>Mr. Herminio Cruz</p>
                     <p>Mrs. Ma. Cecilia Cruz</p>
@@ -209,7 +344,7 @@
                 <div class="grid sm:grid-cols-2 gap-2 mb-5 reveal fade-bottom">
                     <div>
                         <h3 class="en-sub-title">GROOMSMEN</h3>
-                        <p>Mr. Mark Daren Pere</p>
+                        <p>Mr. Mark Daren Perez</p>
                         <p>Mr. Joel Byron Ramirez</p>
                     </div>
                     <div>
@@ -261,65 +396,6 @@
                 </div>
             </div>
             <!-- End of Entourage -->
-
-            <!-- Others -->
-            <div class="others bg-brand-light" id="others">
-                <div class="others-bg">
-                    <h2 class="self-title text-2xl font-bold text-white my-10 text-center">Notes</h2>
-                    <div class="grid lg:grid-cols-3 gap-10">
-                        <div class="card reveal fade-bottom">
-                            <div class="mb-5">
-                                <h2 class="en-main-title">RSVP</h2>
-                                <p>
-                                    WE HAVE RESERVED (1) SEAT FOR YOU. </br>
-                                    We have invited limited number of guests who are dear to our hearts. 
-                                    It is our hope that you can come and stay until the end of our special day. 
-                                    So, the favor of your response is requested 
-                                    on or before JUNE 20, 2024.
-                                    To confirm your attendance, please contact our wedding coordinator.
-                                    Roch/Mayn 0917-890-9158/0917-118-9236
-                                </p>
-                            </div>
-                            <div class="text-center">
-                                <a href="https://fb.me/g/p_AMpABbzZGXTVG7Vb/5sXVVZYs?ref=share" target="_blank" class="btn">See attendance</a>
-                            </div>
-                        </div>
-                        <div class="card reveal fade-bottom md:duration-2">
-                            <div class="mb-5">
-                                <h2 class="en-main-title">Dress Code</h2>
-                                <p>
-                                    Please come in your semi-formal attire.
-                                    We encourage you to dress in shades of dusty blue and beige.
-                                </p>
-                                <div class="flex justify-center mt-10">
-                                    <img src="ej-assets/colors/dusty-blue.png" alt="dusty-blue" class="w-16">
-                                    <img src="ej-assets/colors/dark-dusty-blue.png" alt="dark-dusty-blue" class="w-16">
-                                    <img src="ej-assets/colors/beige.png" alt="beige" class="w-16">
-                                    <img src="ej-assets/colors/dark-beige.png" alt="dark-beige" class="w-16">
-                                </div>
-                            </div>
-                            <div class="text-center" style="align-self: end;">
-                                <button onclick="openModal('map-modal')" class="btn">See Location</button>
-                            </div>
-                        </div>
-                        <div class="card reveal fade-bottom md:duration-3">
-                            <div class="mb-5">
-                                <h2 class="en-main-title">Gift Reference</h2>
-                                <p>
-                                    With all that we have, we’ve been truly blessed. Your presence and prayers are all that we request. 
-                                    However, if it is your wish to bless us with gift, we would greatly appreciate a monetary token to help us start our married life.
-                                </p>
-                            </div>
-                            <div class="text-center" style="align-self: end;">
-                                <button onclick="openModal('gift-modal')" class="btn">See Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <img src="ej-assets/icons/flower-left.png" alt="flower-2" class="absolute w-32 sm:w-72 top-0 left-0 z-1">
-                <img src="ej-assets/icons/flower-right.png" alt="flower-2" class="absolute w-32 sm:w-72 bottom-0 right-0 z-1">
-            </div>
-            <!-- End of Others -->
 
             <!-- Gallery -->
             <div class="py-16 px-10 md:px-20 xl:px-36 text-center" id="gallery">
@@ -430,11 +506,9 @@
                 }
 
                 function playAudio() {
-                        
-                    let music = "{{url('storage/ej-assets/music/Christmas_tree.mp3')}}"
-                    var audio = new Audio(music);
+                    var audio = new Audio('ej-assets/music/When-God-Made-You.mp3');
                     audio.currentTime = 12
-                    // audio.play();
+                    audio.play();
 
                     var video = document.getElementById("content");
                     video.classList.remove("hidden");
