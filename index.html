@@ -284,14 +284,12 @@
                             </div>
                             <h2 class="en-title">RSVP</h2>
                             <p>
-                                We have reserved seats for you. The favor of your reply is requested on June 30, 2023.
-                                Please click the button below to confirm your attendance or
-                                contact us through our social media account.
+                                Thank you to everyone who joined us on our special day. Your presence made our celebration even more meaningful.
                             </p>
                         </div>
-                        <div class="text-center">
+                        <!-- <div class="text-center">
                             <a href="https://fb.me/g/p_AMpABbzZGXTVG7Vb/5sXVVZYs?ref=share" target="_blank" class="btn">See attendance</a>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="card reveal fade-bottom md:duration-2">
                         <div class="mb-5">
@@ -324,13 +322,12 @@
                             </div>
                             <h2 class="en-title">GIFT REFERENCE</h2>
                             <p>
-                                We haven't got a gift list for all of you to see. However, if it is your wish to bless us with a gift, 
-                                we would greatly appreciate a cash contribution to help us start our married life.
+                               Thank you for your love, support, and thoughtful gifts. Your kindness has truly helped us begin our married life with grateful hearts.
                             </p>
                         </div>
-                        <div class="text-center" style="align-self: end;">
+                        <!-- <div class="text-center" style="align-self: end;">
                             <button onclick="openModal('gift-modal')" class="btn">See Details</button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -341,13 +338,11 @@
         <div class="savethedate-container grid">
             <div class="justify-self-center self-center mx-2 xs:mx-5 sm:mx-10 lg:mx-20">
                 <div class="grid gap-3 mb-5 reveal fade-bottom">
-                    <h2 class="self-title text-lg sm:text-2xl font-bold">Save the Date</h2>
-                    <h3 class="text-2xl sm:text-4xl">Can't Wait to See You</h3>
+                    <h2 class="self-title text-lg sm:text-2xl font-bold">Our Wedding Day</h2>
+                    <h3 class="text-2xl sm:text-4xl">Thank You for Celebrating With Us</h3>
                     <img src="assets/icons/leaf.png" alt="Leaf" class="justify-self-center">
                     <p>
-                        It is with great pleasure that we announce our upcoming nuptials. 
-                        We would be honored if you could join us in celebrating this joyous occasion as we exchange our vows and begin our journey together as one. 
-                        Further details will be forthcoming. Please save the date and accept our sincerest gratitude in advance for your attendance. Warm regards.
+                        We are deeply grateful to everyone who joined us in celebrating our union. Our wedding day was truly special, and your presence helped make it unforgettable.
                     </p>
                 </div>
                 <div class="flex justify-center flex-wrap reveal fade-bottom">
@@ -715,35 +710,28 @@
         </script>
 
         <script>
-            // date_today = {!! $date_now !!};
-            // Set the date we're counting down to
-            var countDownDate = new Date("Sept 9, 2023 10:00:00").getTime();
-            
-            // Update the count down every 1 second
-            var x = setInterval(function() {
-            
-              // Get today's date and time
-              var now = new Date().getTime();
-                
-              // Find the distance between now and the count down date
-              var distance = countDownDate - now;
-                
-              // Time calculations for days, hours, minutes and seconds
-              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-              document.getElementById("days").innerHTML = days;
-              document.getElementById("hours").innerHTML = hours;
-              document.getElementById("minutes").innerHTML = minutes;
-              document.getElementById("seconds").innerHTML = seconds;
-                
-              // If the count down is over, write some text 
-              if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("Timer").innerHTML = "EXPIRED";
-              }
+            // Set the date you want to count UP from
+            var startDate = new Date("Sept 9, 2023 10:00:00").getTime();
+        
+            // Update every second
+            var x = setInterval(function () {
+                // Current time
+                var now = new Date().getTime();
+        
+                // Time difference
+                var distance = now - startDate;
+        
+                // Convert to days, hours, minutes, seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+                // Update UI
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("minutes").innerHTML = minutes;
+                document.getElementById("seconds").innerHTML = seconds;
             }, 1000);
         </script>
     
